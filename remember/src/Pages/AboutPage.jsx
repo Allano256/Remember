@@ -1,8 +1,10 @@
+import PageNavigation from "../components/PageNavigation";
 
 
 export default  function AboutPage() {
     return (
        <main>
+        <PageNavigation />
 
         <section>
             <div>

@@ -1,9 +1,12 @@
+import PageNavigation from "../components/PageNavigation";
+
  export default function  Login() {
     return (
         <main>
+            <PageNavigation />
             <form action="">
                 <div>
-                    <label htmlFor="email">Email adress</label>
+                    <label htmlFor="email">Email </label>
                     <input type="email" id="email" />
                 </div>
                 <div>
