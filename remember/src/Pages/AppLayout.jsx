@@ -1,13 +1,17 @@
-import AppNavigation from "../components/AppNavigation"
-import PageNavigation from "../components/PageNavigation"
+import styles from "./AppLayOut.module.css";
+// import PageNavigation from "../components/PageNavigation";
+import SideBar from "../components/SideBar";
+import Map from "../components/Map";
 
 function AppLayout() {
+    // <PageNavigation />
+          
     return (
-        <div className={StyleSheet.app}>
-            <PageNavigation />
-            <AppNavigation />
-            <h1>This is the page layout!</h1>
-            
+        <div className={styles.app}>
+          
+          <SideBar />
+          <Map />
+          
         </div>
     )
 }
