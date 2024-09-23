@@ -3,16 +3,16 @@ import PageNavigation from "../components/PageNavigation";
 import styles from "./Homepage.module.css";
 
 
- export default function HomePage() {
+ export default function Home() {
     return (
        
-            <main className={styles.homepage} >
+            <main className={styles.home} >
                 <PageNavigation />
 
                 <section>
                     <h1>We help you remember...
                     <br />
-                    Remember helps you keep your fond experiences. </h1>
+                    Remember helps you keep your fond memories! </h1>
                     <h2>
                         With Remember, for every footstep you took to another country, restaurant or activity you did...we help you remember every happy moment.
                     </h2>

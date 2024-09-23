@@ -3,7 +3,7 @@ import PageNavigation from "../components/PageNavigation"
 
 function AppLayout() {
     return (
-        <div>
+        <div className={StyleSheet.app}>
             <PageNavigation />
             <AppNavigation />
             <h1>This is the page layout!</h1>
