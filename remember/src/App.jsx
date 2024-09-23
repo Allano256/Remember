@@ -10,10 +10,17 @@ function App() {
   return (
     <BrowserRouter>
     <Routes>
-      <Route path="/"  element={<HomePage />} />
+      <Route index  element={<HomePage />} />
       <Route path="about" element= {<AboutPage/>} />
       <Route path="login" element={<Login />} />
-      <Route path="app" element={<AppLayout />} />
+      <Route path="app" element={<AppLayout />}>
+         {/* This creates the list of cities to be displayed if no specific route is specified */}
+         <Route index element={<p>List of cities</p>} />
+      {/* These are nested routes */}
+         <Route path="cities" element={<p>Cities</p>} />
+         <Route path="countries" element={<p>Countries</p>} />
+         <Route path="form" element={<p>Form</p>} />
+      </Route> 
       <Route path="*"  element={<PageNotFound />} />
       </Routes>
       </BrowserRouter>
