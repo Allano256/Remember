@@ -4,10 +4,10 @@
 /* These CSS variables are global, so they are available in all CSS modules */
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-/* 
+
 :root {
   --color-brand--1: #ffb545;
-  --color-brand--2: #00c46a;
+  --color-brand--2: #0076c4;
 
   --color-dark--0: #242a2e;
   --color-dark--1: #2d3439;
@@ -68,4 +68,4 @@ input:focus {
   font-weight: 600;
   padding: 1rem 3rem;
   border-radius: 5px;
-} */
+}

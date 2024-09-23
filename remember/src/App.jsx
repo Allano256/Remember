@@ -12,8 +12,8 @@ function App() {
     <Routes>
       <Route path="/"  element={<HomePage />} />
       <Route path="about" element= {<AboutPage/>} />
-      <Route path="login" element={<Login />} />
       <Route path="app" element={<AppLayout />} />
+      <Route path="login" element={<Login />} />
       <Route path="*"  element={<PageNotFound />} />
       </Routes>
       </BrowserRouter>
