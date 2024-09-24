@@ -3,10 +3,12 @@ import CityItem from './CityItem';
 import styles from './CityList.module.css'
 import Spinner from './Spinner'
 import Message from "./Message"
+import { useCities } from '../contexts/CitiesContext';
 
-function CityList({cities, isLoading}) {
+function CityList() {
     // This function will return a list of all the cities visited.
     
+    const {cities, isLoading} = useCities();
 
     if(isLoading) return <Spinner />;
 

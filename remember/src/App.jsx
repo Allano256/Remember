@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"
-import { useEffect, useState } from "react"
+
 
 import AboutPage from "./Pages/AboutPage"
 import AppLayout from "./Pages/AppLayout"
@@ -10,35 +10,15 @@ import CityList from "./components/CityList"
 import CountriesList from "./components/CountriesList"
 import City from "./components/City";
 import Form from "./components/Form";
+import { CitiesProvider } from "./contexts/CitiesContext"
 
-const BASE_URL = "http://localhost:8000";
+
 
 function App() {
 
-  // These are global states that will be used in both the country and Place lists
-
-   const [cities, setCities] = useState([]);
-   const [isLoading, setIsLoading] = useState(false);
-
-  //  Use the useEffect hook on the initial render/mount of the application
-  useEffect(function(){
-    async function fetchCities(){
-      try {
-        setIsLoading(true)
-        const res =  await fetch(`${BASE_URL}/cities`);
-         const data = await res.json();
-         setCities(data);
-      } catch{
-        alert('There was an error loading the data...')
-      } finally {
-        setIsLoading(false)
-      }
-    }
-    fetchCities();
-    
-  },[]);
 
   return (
+    <CitiesProvider>
     <BrowserRouter>
     <Routes>
       <Route index  element={<HomePage />} />
@@ -49,17 +29,18 @@ function App() {
          {/* The replace keyword will replace the current elementin the history stack */}
          <Route index element={<Navigate replace to="cities" />} />
       {/* These are nested routes */}
-         <Route path="cities" element={<CityList />} cities={cities} isLoading={isLoading} />
+         <Route path="cities" element={<CityList />} />
          {/* Using params to store/manage state in the URL */}
          <Route path="cities/:id" element={<City />} />
          {/* We derive the countries from the cities component when  it loads */}
-         <Route path="countries" element={<CountriesList cities={cities} isLoading={isLoading} />} />
+         <Route path="countries" element={<CountriesList />} />
         
          <Route path="form" element={<Form />} />
       </Route> 
       <Route path="*"  element={<PageNotFound />} />
       </Routes>
       </BrowserRouter>
+      </CitiesProvider >
       
   
   )
