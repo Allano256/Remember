@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { useEffect, useState } from "react"
 
 import AboutPage from "./Pages/AboutPage"
 import AppLayout from "./Pages/AppLayout"
@@ -6,7 +7,7 @@ import HomePage from "./Pages/HomePage"
 import Login from "./Pages/Login"
 import PageNotFound from "./Pages/PageNotFound"
 import CityList from "./components/CityList"
-import { useEffect, useState } from "react"
+import CountriesList from "./components/CountriesList"
 
 const BASE_URL = "http://localhost:8000";
 
@@ -46,7 +47,8 @@ function App() {
          <Route index element={<CityList cities={cities} isLoading={isLoading} />} />
       {/* These are nested routes */}
          <Route path="cities" element={<CityList />} cities={cities} isLoading={isLoading} />
-         <Route path="countries" element={<p>Countries</p>} />
+         {/* We derive the countries from the cities component when  it loads */}
+         <Route path="countries" element={<CountriesList cities={cities} isLoading={isLoading} />} />
          <Route path="form" element={<p>Form</p>} />
       </Route> 
       <Route path="*"  element={<PageNotFound />} />
