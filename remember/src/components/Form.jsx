@@ -23,7 +23,7 @@ function Form() {
   const [notes, setNotes] = useState("");
 
   return (
-    <form className={styles.form}>
+    <form className={styles.formItem}>
       <div className={styles.row}>
         <label htmlFor="cityName">City name</label>
         <input
@@ -52,7 +52,7 @@ function Form() {
         />
       </div>
 
-      <div className={styles.buttons}>
+      <div className={styles.formButtons}>
         <Button type='primary'>  Add</Button>  
         <Button type='back' onClick={(e)=> 
             {
