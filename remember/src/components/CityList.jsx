@@ -6,7 +6,7 @@ import Message from "./Message"
 
 function CityList({cities, isLoading}) {
     // This function will return a list of all the cities visited.
-    
+    console.log(cities)
 
     if(isLoading) return <Spinner />;
 

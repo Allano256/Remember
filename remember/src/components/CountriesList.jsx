@@ -1,5 +1,5 @@
-import CityItem from './CityItem';
-import styles from './CityList.module.css'
+import CountryItem from './CountryItem';
+import styles from './CountriesList.module.css'
 import Spinner from './Spinner'
 import Message from "./Message"
 
@@ -12,11 +12,21 @@ function CountriesList({cities, isLoading}) {
      // Incase there is no cities, a message will be returned
      if(!cities.length) return <Message message="Please click on the map to get started..." />
 
+     const countries = cities.reduce((arr, city) => {
+        if (!arr.map((el) => el.country).includes(city.country))
+          return [...arr, { country: city.country, emoji: city.emoji }];
+        else return arr;
+      }, []);
+       
+   
+
     return (
-        <ul className={styles.cityList} >
-           {cities.map((city)=> <CityItem city={city} key={city.id} /> )}
-        </ul>
+        <ul className={styles.countriesList}>
+      {countries.map((country) => (
+        <CountryItem country={country} key={country.country} />
+      ))}
+    </ul>
     )
 }
 
-export default CityList
+export default CountriesList

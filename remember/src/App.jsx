@@ -7,6 +7,7 @@ import Login from "./Pages/Login"
 import PageNotFound from "./Pages/PageNotFound"
 import CityList from "./components/CityList"
 import { useEffect, useState } from "react"
+import CountriesList from "./components/CountriesList"
 
 const BASE_URL = "http://localhost:8000";
 
@@ -24,9 +25,12 @@ function App() {
         setIsLoading(true)
         const res =  await fetch(`${BASE_URL}/cities`);
          const data = await res.json();
+          
          setCities(data);
+         console.log(cities)
+         
       } catch{
-        alert('There was an error loading the data...')
+        alert('Error loading the data...')
       } finally {
         setIsLoading(false)
       }
@@ -43,10 +47,12 @@ function App() {
       <Route path="login" element={<Login />} />
       <Route path="app" element={<AppLayout />}>
          {/* This creates the list of cities to be displayed if no specific route is specified */}
+
          <Route index element={<CityList cities={cities} isLoading={isLoading} />} />
+         
       {/* These are nested routes */}
-         <Route path="cities" element={<CityList />} cities={cities} isLoading={isLoading} />
-         <Route path="countries" element={<p>Countries</p>} />
+         <Route path="cities" element={<CityList cities={cities} isLoading={isLoading} />}  />
+         <Route path="countries" element={<CountriesList cities={cities} isLoading={isLoading} />}  />
          <Route path="form" element={<p>Form</p>} />
       </Route> 
       <Route path="*"  element={<PageNotFound />} />
