@@ -2,10 +2,12 @@ import CountryItem from './CountryItem';
 import styles from './CountriesList.module.css'
 import Spinner from './Spinner'
 import Message from "./Message"
+import { useCities } from '../Contexts/CitiesContext';
 
-function CountriesList({cities, isLoading}) {
+function CountriesList() {
     // This function will return a list of all the cities visited.
     
+    const {cities, isLoading} = useCities();
 
     if(isLoading) return <Spinner />;
 
