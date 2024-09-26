@@ -8,6 +8,7 @@ import PageNotFound from "./Pages/PageNotFound"
 import CityList from "./components/CityList"
 import { useEffect, useState } from "react"
 import CountriesList from "./components/CountriesList"
+import City from "./components/City"
 
 const BASE_URL = "http://localhost:8000";
 
@@ -52,6 +53,9 @@ function App() {
          
       {/* These are nested routes */}
          <Route path="cities" element={<CityList cities={cities} isLoading={isLoading} />}  />
+
+         <Route path="cities/:id" element={<City />} />
+
          <Route path="countries" element={<CountriesList cities={cities} isLoading={isLoading} />}  />
          <Route path="form" element={<p>Form</p>} />
       </Route> 
