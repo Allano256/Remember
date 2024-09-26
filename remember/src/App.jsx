@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"
 
 import AboutPage from "./Pages/AboutPage"
 import AppLayout from "./Pages/AppLayout"
@@ -9,13 +9,14 @@ import CityList from "./components/CityList"
 import { useEffect, useState } from "react"
 import CountriesList from "./components/CountriesList"
 import City from "./components/City"
+import Form from "./components/Form"
 
-const BASE_URL = "http://localhost:8000";
+const BASE_URL = "http://localhost:8000";   
 
 function App() {
 
   // These are global states that will be used in both the country and Place lists
-
+  
    const [cities, setCities] = useState([]);
    const [isLoading, setIsLoading] = useState(false);
 
@@ -47,9 +48,9 @@ function App() {
       <Route path="about" element= {<AboutPage/>} />
       <Route path="login" element={<Login />} />
       <Route path="app" element={<AppLayout />}>
-         {/* This creates the list of cities to be displayed if no specific route is specified */}
+         {/* The index route takes you direct to the cities list */}
 
-         <Route index element={<CityList cities={cities} isLoading={isLoading} />} />
+         <Route index element={<Navigate replace to={'cities'}  />} />
          
       {/* These are nested routes */}
          <Route path="cities" element={<CityList cities={cities} isLoading={isLoading} />}  />
@@ -57,7 +58,7 @@ function App() {
          <Route path="cities/:id" element={<City />} />
 
          <Route path="countries" element={<CountriesList cities={cities} isLoading={isLoading} />}  />
-         <Route path="form" element={<p>Form</p>} />
+         <Route path="form" element={<Form/>} />
       </Route> 
       <Route path="*"  element={<PageNotFound />} />
       </Routes>
