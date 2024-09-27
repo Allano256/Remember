@@ -15,8 +15,6 @@ import { CitiesProvider } from "./Contexts/CitiesContext"
 
 function App() {
 
-
-
   return (
     <CitiesProvider>
     <BrowserRouter>
