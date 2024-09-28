@@ -47,7 +47,7 @@ function Form() {
       if(!lat && !lng) return;
      
       try{
-        isLoadingGeocoding(true);
+        setIsLoadingGeocoding(true);
         setGeoCodingError('')
         const res = await fetch(`${BASE_URL}?latitude={lat}&longitude={lng}`);
         const data = await res.json();
@@ -58,10 +58,12 @@ function Form() {
       }catch(err) {
             setGeoCodingError(err.message)
       } finally {
-         isLoadingGeocoding(false)
+         setIsLoadingGeocoding(false)
       }
     }
-  }, [lat, lng])
+    fetchCityData();
+  },
+   [lat, lng])
 
  async function handleSubmit(e){
   e.preventDefault();
