@@ -1,4 +1,3 @@
-// 
 
 import { useEffect, useState } from "react";
 
@@ -29,7 +28,7 @@ function Form() {
   const {createCity, isLoading}= useCities();
   const navigate=useNavigate();
  
-  const [isLoadingGeocoding, setIsLoadingGeocoding] = useState();
+  const [isLoadingGeocoding, setIsLoadingGeocoding] = useState(false);
   const [cityName, setCityName] = useState("");
   const [country, setCountry] = useState("");
   const [date, setDate] = useState(new Date());
@@ -42,14 +41,15 @@ function Form() {
 
   useEffect(function(){
     // This effect will check for the city and attach the new data to that city accordingly, lookup if this city exists,throw an error if it doesnt.
+    if(!lat && !lng) return;
 
     async function fetchCityData(){
-      if(!lat && !lng) return;
-     
+    
       try{
         setIsLoadingGeocoding(true);
-        setGeoCodingError('')
-        const res = await fetch(`${BASE_URL}?latitude={lat}&longitude={lng}`);
+        setGeoCodingError('');
+
+        const res = await fetch(`${BASE_URL}?latitude=${lat}&longitude=${lng}`);
         const data = await res.json();
         if(!data.countryCode) throw new Error ('Click somewhere else, that is not a city please..😟');
       setCityName(data.city || data.locality ||  '');
@@ -79,7 +79,7 @@ function Form() {
   };
 
   await createCity(newCity);
-  navigate('/app/cities')
+  navigate('/app/cities');
 
 }
 
@@ -93,7 +93,7 @@ function Form() {
   if(!lat && !lng) return <Message message='Click on the map to get started...' />
 
   return (
-    <form className=  {`${styles.formItem} ${isLoading? styles.loading: ''}`} onSubmit={handleSubmit}>
+    <form className=  {`${styles.formItem} ${isLoading ? styles.loading: ''}`} onSubmit={handleSubmit}>
       <div className={styles.row}>
         <label htmlFor="cityName">City name</label>
         <input
@@ -108,7 +108,7 @@ function Form() {
         <label htmlFor="date">When did you go to {cityName}?</label>
         
 
-        <DatePicker onChange={date=> setDate(date)} selected={date} dateFormat={'dd/MM/yyyy'} id="date" />
+        <DatePicker onChange={(date)=> setDate(date)} selected={date} dateFormat='dd/MM/yyyy' id="date" />
       </div>
 
       <div className={styles.row}>

@@ -10,7 +10,7 @@ const formatDate = (date) =>
     day: "numeric",
     month: "long",
     year: "numeric",
-    weekday: "long",
+   
   }).format(new Date(date));
 
 function City() {
@@ -22,11 +22,11 @@ function City() {
 
  useEffect(function (){
    getCity(id);
- }, [id]);
+ }, [id, getCity]);
 
   const { cityName, emoji, date, notes } = currentCity;
 
-  if(isLoading) return <Spinner />
+  if(isLoading) return <Spinner />;
    
   return (
     <div className={styles.city}>

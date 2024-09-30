@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom";
 import styles from "./Map.module.css"
 import { MapContainer, Marker, Popup, TileLayer, useMap, useMapEvents } from "react-leaflet";
 import { useEffect, useState } from "react";
@@ -11,12 +11,11 @@ function Map() {
 
     const{cities} = useCities();
    
-
     const [mapPosition, setMapPosition] = useState([40, 0])
     
      const {isLoading: isLoadingPosition, position: geolocationPosition, getPosition} = useGeolocation();
 
-    const {mapLat, mapLng} = useUrlPosition();
+    const [mapLat, mapLng]  = useUrlPosition();
 
    useEffect(function(){
    
@@ -24,12 +23,12 @@ function Map() {
    },[mapLat, mapLng])
 
    useEffect(function(){
-    if(geolocationPosition) setMapPosition([geolocationPosition.lat, geolocationPosition.lng])
+    if(geolocationPosition) setMapPosition([geolocationPosition.lat, geolocationPosition.lng]);
 
    }, [geolocationPosition])
 
     return (
-        <div className={styles.mapContainer}  > 
+        <div className={styles.mapContainer}> 
      {!geolocationPosition  &&  (
       <Button type='position' onClick={getPosition}
       >  {isLoadingPosition ? "Loading..." : "Use your position..." } </Button>
@@ -59,7 +58,7 @@ function Map() {
 </MapContainer>
      
         </div>
-    )
+    );
 }
 
 function SwitchCenter({position}){
@@ -72,9 +71,9 @@ function SwitchCenter({position}){
 function DetectClick(){
     // This custom hook will detect any click on the map and immediately show the map
     
-    const navigate = useNavigate()
+    const navigate = useNavigate();
     useMapEvents({
-        click: e => navigate(`form?lat=${e.latlng}$lng=${e.latlng}`)
+        click: (e) => navigate(`form?lat=${e.latlng.lat}&lng=${e.latlng.lng}`),
 
     });
 }

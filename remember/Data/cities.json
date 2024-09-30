@@ -23,6 +23,18 @@
         "lng": -3.7133789062500004
       },
       "id": "17806751"
+    },
+    {
+      "id": "ff6b",
+      "cityName": "Arcos de las Salinas",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2024-09-30T23:43:45.134Z",
+      "notes": "One of my best cities\n",
+      "position": {
+        "lat": "40.017962736709805",
+        "lng": "-1.1224003696725517"
+      }
     }
   ]
 }
