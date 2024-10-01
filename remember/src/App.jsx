@@ -11,6 +11,7 @@ import City from "./components/City"
 import Form from "./components/Form"
 import { CitiesProvider } from "./Contexts/CitiesContext"
 import {AuthProvider} from "./Contexts/AuthContext"
+import Signup from "./Pages/Signup"
 
  
 
@@ -24,6 +25,7 @@ function App() {
       <Route index  element={<HomePage />} />
       <Route path="about" element= {<AboutPage/>} />
       <Route path="login" element={<Login />} />
+      <Route path="signup" element={<Signup />} />
       <Route path="app" element={<AppLayout />}>
          {/* The index route takes you direct to the cities list */}
 

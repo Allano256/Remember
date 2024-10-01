@@ -15,6 +15,10 @@ function PageNavigation() {
                 <li>
                     <NavLink to="/login" className={styles.ctaLink}>Login</NavLink> 
                 </li>
+
+                <li>
+                    <NavLink to="/signup" className={styles.ctaLink}>Signup</NavLink> 
+                </li>
                
                 
             </ul>

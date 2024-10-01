@@ -95,6 +95,42 @@
         "lat": "34.643009978458714",
         "lng": "-118.0169594956512"
       }
+    },
+    {
+      "id": "5ef2",
+      "cityName": "Zuera",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2024-10-01T20:24:54.365Z",
+      "notes": "I loved this city",
+      "position": {
+        "lat": "41.902487843895045",
+        "lng": "-0.8578703270965905"
+      }
+    },
+    {
+      "id": "3a2c",
+      "cityName": "Saint-Laurent-Bretagne",
+      "country": "France",
+      "emoji": "🇫🇷",
+      "date": "2024-10-01T20:25:07.624Z",
+      "notes": "This was an amazing place too",
+      "position": {
+        "lat": "43.38135113231868",
+        "lng": "-0.1783105656070183"
+      }
+    },
+    {
+      "id": "ac25",
+      "cityName": "Viana do Alentejo",
+      "country": "Portugal",
+      "emoji": "🇵🇹",
+      "date": "2024-10-01T20:25:29.291Z",
+      "notes": "We had alot of funj at this location",
+      "position": {
+        "lat": "38.41251459721196",
+        "lng": "-8.26569319513784"
+      }
     }
   ]
 }
