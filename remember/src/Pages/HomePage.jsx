@@ -16,7 +16,7 @@ import styles from "./Homepage.module.css";
                     <h2>
                         With Remember, for every footstep you took to another country, restaurant or activity you did...we help you remember every happy moment.
                     </h2>
-                    <Link to="/app" className="cta">Start your journey</Link>
+                    <Link to="/login" className="cta">Start your journey</Link>
                 </section>
             </main>
             

@@ -25,15 +25,75 @@
       "id": "17806751"
     },
     {
-      "id": "ff6b",
-      "cityName": "Arcos de las Salinas",
+      "id": "4061",
+      "cityName": "Los Angeles",
+      "country": "United States of America (the)",
+      "emoji": "🇺🇸",
+      "date": "2024-09-30T23:46:08.124Z",
+      "notes": "I went to this place to get my hair done...",
+      "position": {
+        "lat": "33.805296245508146",
+        "lng": "-118.09444914657949"
+      }
+    },
+    {
+      "id": "ec5e",
+      "cityName": "Tuba City",
+      "country": "United States of America (the)",
+      "emoji": "🇺🇸",
+      "date": "2024-09-30T23:46:58.610Z",
+      "notes": "Tuba City has always been my to go Iced tea place...",
+      "position": {
+        "lat": "36.4116252568754",
+        "lng": "-111.41373748920658"
+      }
+    },
+    {
+      "id": "88d3",
+      "cityName": "Kalangala",
+      "country": "Uganda",
+      "emoji": "🇺🇬",
+      "date": "2024-09-30T23:52:04.930Z",
+      "notes": "I loved the fish at this site...",
+      "position": {
+        "lat": "-0.3775597881880451",
+        "lng": "32.09772763215022"
+      }
+    },
+    {
+      "id": "ad08",
+      "cityName": "Madrid",
       "country": "Spain",
       "emoji": "🇪🇸",
-      "date": "2024-09-30T23:43:45.134Z",
-      "notes": "One of my best cities\n",
+      "date": "2024-10-01T01:09:18.480Z",
+      "notes": "",
       "position": {
-        "lat": "40.017962736709805",
-        "lng": "-1.1224003696725517"
+        "lat": "40.44741449066753",
+        "lng": "-3.689555549890858"
+      }
+    },
+    {
+      "id": "ce3c",
+      "cityName": "Pompapiel",
+      "country": "Australia",
+      "emoji": "🇦🇺",
+      "date": "2024-10-01T02:11:21.619Z",
+      "notes": "Oh i hate this place, so many reptiles.",
+      "position": {
+        "lat": "-36.38126402252643",
+        "lng": "144.05016583461276"
+      }
+    },
+    {
+      "id": "826d",
+      "cityName": "Los Angeles",
+      "country": "United States of America (the)",
+      "emoji": "🇺🇸",
+      "date": "2024-10-01T02:15:56.944Z",
+      "notes": "",
+      "position": {
+        "lat": "34.643009978458714",
+        "lng": "-118.0169594956512"
       }
     }
   ]
