@@ -18,12 +18,6 @@ function reducer(state, action) {
   }
 }
 
-const FAKE_USER = {
-  name: "Jack",
-  email: "jack@example.com",
-  password: "milan10",
-  avatar: "https://i.pravatar.cc/100?u=zz",
-};
 
 function AuthProvider({ children }) {
   const [{ user, isAuthenticated }, dispatch] = useReducer(
@@ -31,10 +25,31 @@ function AuthProvider({ children }) {
     initialState
   );
 
-  function login(email, password) {
-    if (email === FAKE_USER.email && password === FAKE_USER.password)
-      dispatch({ type: "login", payload: FAKE_USER });
+  // Login function to authenticate user with backend
+
+  async function login(username, password) {
+    try{
+      const response= await fetch("http://127.0.0.1:8000/dj-rest-auth/login/", {
+        method:'POST',
+        headers: {
+          'Content-Type':'application/json',
+        },
+        body: JSON.stringify({username, password}),
+
+      });
+      if (response.ok){
+        const data= await response.json();
+        dispatch({type: 'login', payload:data});
+      } else {
+        const  errorData= await response.json();
+        console.error('Error ', errorData.error);
+      }
+    } catch (error){
+      console.error('Login failed', error)
+    }
   }
+
+
 
   function logout() {
     dispatch({ type: "logout" });

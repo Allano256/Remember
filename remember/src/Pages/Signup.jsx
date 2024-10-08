@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from './Signup.module.css'
+import styles from './Signup.module.css';
 import Button from "../components/Button";
 import PageNavigation from "../components/PageNavigation";
 
@@ -9,7 +9,7 @@ export default function Signup() {
     username: "",
     email: "",
     password: "",
-    confirmPassword: ""
+    password2: ""
   });
 
   // Error state
@@ -25,38 +25,56 @@ export default function Signup() {
   };
 
   // Handle form submission
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     // Validate password and confirmPassword match
-    if (formData.password !== formData.confirmPassword) {
+    if (formData.password !== formData.password2) {
       setError("Passwords do not match!");
       return;
     }
 
-    // Proceed with form submission (e.g., send to backend)
-    console.log("Form Submitted", formData);
     
-    // Reset form and error after successful submission
-    setFormData({
-      username: "",
-      email: "",
-      password: "",
-      confirmPassword: ""
-    });
-    setError("");
+    console.log("Form Submitted", formData);
+    try {
+      const response = await fetch('http://127.0.0.1:8000/dj-rest-auth/register/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        console.log('Profile created successfully:', data);
+        // Optionally reset the form or show success message
+       
+        setFormData({
+          username: "",
+          email: "",
+          password: "",
+          confirmPassword: ""
+        });
+        setError("");
+      } else {
+        const errorData = await response.json();
+        console.error('Error:', errorData);
+      }
+    } catch (error) {
+      console.error('Error submitting profile:', error);
+    }
   };
 
   return (
     <main className={styles.login}>
       <PageNavigation />
-      
-      <form onSubmit={handleSubmit} className={styles.form} >
+      <form onSubmit={handleSubmit} className={styles.form}>
         {/* Username */}
-        <div  className={styles.row}>
+        <div className={styles.row}>
           <label htmlFor="username">Username</label>
           <input
-          id="username"
+            id="username"
             type="text"
             name="username"
             value={formData.username}
@@ -66,10 +84,10 @@ export default function Signup() {
         </div>
 
         {/* Email */}
-        <div  className={styles.row}>
+        <div className={styles.row}>
           <label htmlFor="email">Email</label>
           <input
-          id="email"
+            id="email"
             type="email"
             name="email"
             value={formData.email}
@@ -79,10 +97,10 @@ export default function Signup() {
         </div>
 
         {/* Password */}
-        <div  className={styles.row}>
-          <label htmlFor="password1">Password</label>
+        <div className={styles.row}>
+          <label htmlFor="password">Password</label>
           <input
-          id="password1"
+            id="password"
             type="password"
             name="password"
             value={formData.password}
@@ -92,13 +110,13 @@ export default function Signup() {
         </div>
 
         {/* Confirm Password */}
-        <div >
+        <div className={styles.row}>
           <label htmlFor="password2">Confirm Password</label>
           <input
-          id="password2"
+            id="password2"
             type="password"
-            name="confirmPassword"
-            value={formData.confirmPassword}
+            name="password2"
+            value={formData.password2}
             onChange={handleChange}
             required
           />
@@ -108,15 +126,10 @@ export default function Signup() {
         {error && <p style={{ color: "red" }}>{error}</p>}
 
         {/* Submit Button */}
-       
-       
         <div>
-             
-             <Button type='primary'>Sign up</Button>
-         </div>
+          <Button type='primary'>Sign up</Button>
+        </div>
       </form>
     </main>
   );
-};
-
-
+}

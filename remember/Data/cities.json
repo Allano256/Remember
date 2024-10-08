@@ -1,135 +1,63 @@
 {
   "cities": [
     {
-      "cityName": "Lisbon",
-      "country": "Portugal",
-      "emoji": "🇵🇹",
-      "date": "2027-10-31T15:59:59.138Z",
-      "notes": "My favorite city so far!",
-      "position": {
-        "lat": 38.727881642324164,
-        "lng": -9.140900099907554
-      },
-      "id": "73930385"
-    },
-    {
-      "cityName": "Madrid",
+      "id": "58e1",
+      "cityName": "Quintanilla de Arriba",
       "country": "Spain",
       "emoji": "🇪🇸",
-      "date": "2027-07-15T08:22:53.976Z",
+      "date": "2024-10-02T22:16:10.865Z",
       "notes": "",
       "position": {
-        "lat": 40.46635901755316,
-        "lng": -3.7133789062500004
-      },
-      "id": "17806751"
-    },
-    {
-      "id": "4061",
-      "cityName": "Los Angeles",
-      "country": "United States of America (the)",
-      "emoji": "🇺🇸",
-      "date": "2024-09-30T23:46:08.124Z",
-      "notes": "I went to this place to get my hair done...",
-      "position": {
-        "lat": "33.805296245508146",
-        "lng": "-118.09444914657949"
+        "lat": "41.61670801233777",
+        "lng": "-4.22946233549046"
       }
     },
     {
-      "id": "ec5e",
-      "cityName": "Tuba City",
-      "country": "United States of America (the)",
-      "emoji": "🇺🇸",
-      "date": "2024-09-30T23:46:58.610Z",
-      "notes": "Tuba City has always been my to go Iced tea place...",
-      "position": {
-        "lat": "36.4116252568754",
-        "lng": "-111.41373748920658"
-      }
-    },
-    {
-      "id": "88d3",
-      "cityName": "Kalangala",
-      "country": "Uganda",
-      "emoji": "🇺🇬",
-      "date": "2024-09-30T23:52:04.930Z",
-      "notes": "I loved the fish at this site...",
-      "position": {
-        "lat": "-0.3775597881880451",
-        "lng": "32.09772763215022"
-      }
-    },
-    {
-      "id": "ad08",
-      "cityName": "Madrid",
+      "id": "c036",
+      "cityName": "Corral de Almaguer",
       "country": "Spain",
       "emoji": "🇪🇸",
-      "date": "2024-10-01T01:09:18.480Z",
-      "notes": "",
+      "date": "2024-10-03T18:19:02.227Z",
+      "notes": "jmhsagkashgxahS",
       "position": {
-        "lat": "40.44741449066753",
-        "lng": "-3.689555549890858"
+        "lat": "39.70819813501976",
+        "lng": "-3.2420591767277145"
       }
     },
     {
-      "id": "ce3c",
-      "cityName": "Pompapiel",
-      "country": "Australia",
-      "emoji": "🇦🇺",
-      "date": "2024-10-01T02:11:21.619Z",
-      "notes": "Oh i hate this place, so many reptiles.",
-      "position": {
-        "lat": "-36.38126402252643",
-        "lng": "144.05016583461276"
-      }
-    },
-    {
-      "id": "826d",
-      "cityName": "Los Angeles",
+      "id": "eb14",
+      "cityName": "East Kern",
       "country": "United States of America (the)",
       "emoji": "🇺🇸",
-      "date": "2024-10-01T02:15:56.944Z",
-      "notes": "",
+      "date": "2024-10-03T18:19:12.042Z",
+      "notes": "lsdjfhksjdfhjesd",
       "position": {
-        "lat": "34.643009978458714",
-        "lng": "-118.0169594956512"
+        "lat": "34.832555953401055",
+        "lng": "-118.36844445349878"
       }
     },
     {
-      "id": "5ef2",
-      "cityName": "Zuera",
+      "id": "b4b2",
+      "cityName": "Hanford Northeast",
+      "country": "United States of America (the)",
+      "emoji": "🇺🇸",
+      "date": "2024-10-03T18:28:10.826Z",
+      "notes": "uyhfuyf",
+      "position": {
+        "lat": "36.38626726094268",
+        "lng": "-119.54377144865438"
+      }
+    },
+    {
+      "id": "c501",
+      "cityName": "Pepino",
       "country": "Spain",
       "emoji": "🇪🇸",
-      "date": "2024-10-01T20:24:54.365Z",
-      "notes": "I loved this city",
+      "date": "2024-10-08T02:21:21.461Z",
+      "notes": "this was a a great location",
       "position": {
-        "lat": "41.902487843895045",
-        "lng": "-0.8578703270965905"
-      }
-    },
-    {
-      "id": "3a2c",
-      "cityName": "Saint-Laurent-Bretagne",
-      "country": "France",
-      "emoji": "🇫🇷",
-      "date": "2024-10-01T20:25:07.624Z",
-      "notes": "This was an amazing place too",
-      "position": {
-        "lat": "43.38135113231868",
-        "lng": "-0.1783105656070183"
-      }
-    },
-    {
-      "id": "ac25",
-      "cityName": "Viana do Alentejo",
-      "country": "Portugal",
-      "emoji": "🇵🇹",
-      "date": "2024-10-01T20:25:29.291Z",
-      "notes": "We had alot of funj at this location",
-      "position": {
-        "lat": "38.41251459721196",
-        "lng": "-8.26569319513784"
+        "lat": "40.009859797567046",
+        "lng": "-4.79077875062727"
       }
     }
   ]
