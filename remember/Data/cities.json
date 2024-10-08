@@ -1,63 +1,15 @@
 {
   "cities": [
     {
-      "id": "58e1",
-      "cityName": "Quintanilla de Arriba",
+      "id": "0a3b",
+      "cityName": "Madrid",
       "country": "Spain",
       "emoji": "🇪🇸",
-      "date": "2024-10-02T22:16:10.865Z",
-      "notes": "",
+      "date": "2024-10-08T03:30:58.332Z",
+      "notes": "dfgbdfgdfg",
       "position": {
-        "lat": "41.61670801233777",
-        "lng": "-4.22946233549046"
-      }
-    },
-    {
-      "id": "c036",
-      "cityName": "Corral de Almaguer",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2024-10-03T18:19:02.227Z",
-      "notes": "jmhsagkashgxahS",
-      "position": {
-        "lat": "39.70819813501976",
-        "lng": "-3.2420591767277145"
-      }
-    },
-    {
-      "id": "eb14",
-      "cityName": "East Kern",
-      "country": "United States of America (the)",
-      "emoji": "🇺🇸",
-      "date": "2024-10-03T18:19:12.042Z",
-      "notes": "lsdjfhksjdfhjesd",
-      "position": {
-        "lat": "34.832555953401055",
-        "lng": "-118.36844445349878"
-      }
-    },
-    {
-      "id": "b4b2",
-      "cityName": "Hanford Northeast",
-      "country": "United States of America (the)",
-      "emoji": "🇺🇸",
-      "date": "2024-10-03T18:28:10.826Z",
-      "notes": "uyhfuyf",
-      "position": {
-        "lat": "36.38626726094268",
-        "lng": "-119.54377144865438"
-      }
-    },
-    {
-      "id": "c501",
-      "cityName": "Pepino",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2024-10-08T02:21:21.461Z",
-      "notes": "this was a a great location",
-      "position": {
-        "lat": "40.009859797567046",
-        "lng": "-4.79077875062727"
+        "lat": "40.38695076737808",
+        "lng": "-3.614673996262097"
       }
     }
   ]

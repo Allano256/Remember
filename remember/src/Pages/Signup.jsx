@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from './Signup.module.css';
 import Button from "../components/Button";
 import PageNavigation from "../components/PageNavigation";
+import { useNavigate } from "react-router-dom";
 
 export default function Signup() {
   // Form state
@@ -14,6 +15,8 @@ export default function Signup() {
 
   // Error state
   const [error, setError] = useState("");
+  const [success, setSuccess] = useState(false)
+  const navigate = useNavigate();
 
   // Handle input change
   const handleChange = (e) => {
@@ -44,12 +47,12 @@ export default function Signup() {
         },
         body: JSON.stringify(formData),
       });
+      const data = await response.json();
 
       if (response.ok) {
-        const data = await response.json();
-        console.log('Profile created successfully:', data);
-        // Optionally reset the form or show success message
-       
+        setSuccess(data);
+        
+      
         setFormData({
           username: "",
           email: "",
@@ -66,10 +69,25 @@ export default function Signup() {
     }
   };
 
+  useEffect(()=>{
+    if(success){
+      navigate('/login');
+    }
+
+  },[success, navigate]);
+
   return (
     <main className={styles.login}>
       <PageNavigation />
       <form onSubmit={handleSubmit} className={styles.form}>
+        {/*First_name*/}
+        <div>
+          <label htmlFor="first_name"> First Name</label>
+          <input type="text" id="first_name" name="first_name"
+          value={formData.first_name}
+          onChange={handleChange}
+          required />
+        </div>
         {/* Username */}
         <div className={styles.row}>
           <label htmlFor="username">Username</label>
