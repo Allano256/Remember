@@ -14,7 +14,7 @@ function User() {
   return (
     <div className={styles.user}>
       {/* <img src={user.avatar} alt={user.name} /> */}
-      <span>Welcome, {user.name}</span>
+      {/* <span>Welcome, {user.name}</span> */}
       <button onClick={handleClickEvent}>Logout</button>
     </div>
   );

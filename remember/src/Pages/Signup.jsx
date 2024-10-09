@@ -83,12 +83,13 @@ export default function Signup() {
           name: '',
           email: "",
           password: "",
-          confirmPassword: ""
+          password2: ""
         });
         setError("");
       } else {
-        const errorData = await response.json();
-        console.error('Error:', errorData);
+        // const errorData = await response.json();
+        console.error('Error:', data);
+        setError(data.detail || 'An error occured')
       }
     } catch (error) {
       console.error('Error submitting profile:', error);
@@ -106,14 +107,7 @@ export default function Signup() {
     <main className={styles.login}>
       <PageNavigation />
       <form onSubmit={handleSubmit} className={styles.form}>
-        {/*First_name*/}
-        <div>
-          <label htmlFor="name">Name</label>
-          <input type="text" id="name" name="name"
-          value={formData.name}
-          onChange={handleChange}
-          required />
-        </div>
+        
         {/* Username */}
         <div className={styles.row}>
           <label htmlFor="username">Username</label>
@@ -124,6 +118,7 @@ export default function Signup() {
             value={formData.username}
             onChange={handleChange}
             required
+            autoComplete="new-password"
              
           />
         </div>
@@ -151,6 +146,7 @@ export default function Signup() {
             value={formData.password}
             onChange={handleChange}
             required
+            autoComplete="new-password"
              
           />
         </div>

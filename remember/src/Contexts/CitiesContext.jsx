@@ -97,7 +97,7 @@ function CitiesProvider({children}) {
                   body: JSON.stringify(newCity),
                   headers: {
                     
-                    'Auhorization': `Bearer ${token}`,
+                    'Authorization': `Bearer ${token}`,
                     'Content-Type': 'application/json',
                     'X-CSRFToken': csrfToken,
                    
