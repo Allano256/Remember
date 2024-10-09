@@ -37,8 +37,14 @@ function AuthProvider({ children }) {
         body: JSON.stringify({username, password}),
 
       });
+       
+      const data= await response.json();
+
       if (response.ok){
-        const data= await response.json();
+       const token=data.token;
+       
+        localStorage.setItem('token', token);
+       
         dispatch({type: 'login', payload:data});
       } else {
         const  errorData= await response.json();
@@ -52,7 +58,10 @@ function AuthProvider({ children }) {
 
 
   function logout() {
+    localStorage.removeItem('token');
     dispatch({ type: "logout" });
+
+   
   }
 
   return (

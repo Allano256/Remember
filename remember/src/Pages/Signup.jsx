@@ -8,6 +8,7 @@ export default function Signup() {
   // Form state
   const [formData, setFormData] = useState({
     username: "",
+    name:'',
     email: "",
     password: "",
     password2: ""
@@ -39,11 +40,35 @@ export default function Signup() {
 
     
     console.log("Form Submitted", formData);
+
+
+    function getCookie(name){
+      let cookieValue=null;
+      if(document.cookie && document.cookie !== ''){
+        const cookies = document.cookie.split(';');
+        for (let i = 0; i < cookies.length; i++){
+          const cookie= cookies[i].trim();
+          if (cookie.substring(0, name.length + 1)===(name + '=')){
+            cookieValue = decodeURIComponent(cookie(name.length + 1));
+            break;
+          }
+        }
+      }
+      return cookieValue;
+    }
+    
+
+
+
     try {
+      const csrfToken = getCookie('csrftoken');
+      // const token = localStorage.getItem('token');
       const response = await fetch('http://127.0.0.1:8000/dj-rest-auth/register/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'X-CSRFToken': csrfToken,
+        // 'Authorization':  `Token ${token}`
         },
         body: JSON.stringify(formData),
       });
@@ -55,6 +80,7 @@ export default function Signup() {
       
         setFormData({
           username: "",
+          name: '',
           email: "",
           password: "",
           confirmPassword: ""
@@ -82,9 +108,9 @@ export default function Signup() {
       <form onSubmit={handleSubmit} className={styles.form}>
         {/*First_name*/}
         <div>
-          <label htmlFor="first_name"> First Name</label>
-          <input type="text" id="first_name" name="first_name"
-          value={formData.first_name}
+          <label htmlFor="name">Name</label>
+          <input type="text" id="name" name="name"
+          value={formData.name}
           onChange={handleChange}
           required />
         </div>
@@ -98,6 +124,7 @@ export default function Signup() {
             value={formData.username}
             onChange={handleChange}
             required
+             
           />
         </div>
 
@@ -124,6 +151,7 @@ export default function Signup() {
             value={formData.password}
             onChange={handleChange}
             required
+             
           />
         </div>
 

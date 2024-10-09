@@ -1,24 +1,51 @@
 import { createContext, useContext, useEffect, useState } from "react";
 
-const BASE_URL = "http://localhost:8000"; 
+const BASE_URL = "http://127.0.0.1:8000"; 
 
 const CitiesContext = createContext();
+
+
+function getCSRFToken(){
+  let csrfToken=null;
+  if(document.cookie && document.cookie !== ''){
+    const cookies = document.cookie.split(';');
+    for (let i = 0; i < cookies.length; i++){
+      const cookie= cookies[i].trim();
+      if (cookie.startsWith('csrftoken=')){
+        csrfToken = cookie.substring('csrftoken='.length);
+        break;
+      }
+    }
+  }
+  return csrfToken;
+}
 
 function CitiesProvider({children}) {
 
     const [cities, setCities] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
-    const [currentCity, setCurrentCity] = useState({})
+    const [currentCity, setCurrentCity] = useState(null)
 
   
+    
         useEffect(function(){
             async function fetchCities(){
               try {
                 setIsLoading(true)
-                const res =  await fetch(`${BASE_URL}/cities`);
+               
+                const token=localStorage.getItem('token');
+                const res =  await fetch(`${BASE_URL}/cities/`, 
+                  {
+                    headers: {
+                      'Authorization': `Bearer ${token}`,
+                      'Content-Type': 'Application/json',
+                      
+                    }
+                  }
+                );
                  const data = await res.json();
-                
-                 setCities(data);
+                console.log(data)
+                 setCities(data.length > 0 ? data : []);
                
               } catch{
                 alert('Error loading the data...')
@@ -35,7 +62,15 @@ function CitiesProvider({children}) {
             // This function will get one specific City using the id.
               try {
                 setIsLoading(true)
-                const res =  await fetch(`${BASE_URL}/cities/${id}`);
+                const token=localStorage.getItem('token');
+                const res =  await fetch(`${BASE_URL}/cities/${id}`,
+                  {
+                    headers: {
+                      'Authorizatuion': `Bearer ${token}`,
+                      'Content-Type': 'application/json'
+                    }
+                  }
+                );
                
                  const data = await res.json(); 
                  
@@ -55,11 +90,18 @@ function CitiesProvider({children}) {
             // This function will create City using the id.
               try {
                 setIsLoading(true)
-                const res =  await fetch(`${BASE_URL}/cities`, {
+                const csrfToken =getCSRFToken();
+                const token = localStorage.getItem('token');
+                const res =  await fetch(`${BASE_URL}/cities/`, {
                   method:'POST',
                   body: JSON.stringify(newCity),
                   headers: {
+                    
+                    'Auhorization': `Bearer ${token}`,
                     'Content-Type': 'application/json',
+                    'X-CSRFToken': csrfToken,
+                   
+                   
                   }
                 });
                
@@ -84,8 +126,13 @@ function CitiesProvider({children}) {
             // This function will create City using the id.
               try {
                 setIsLoading(true)
+                const token =localStorage.getItem('token');
                 await fetch(`${BASE_URL}/cities/${id}`, {
                   method:'DELETE',
+                  headers: {
+                    'Authorization': `Bearer ${token}`,
+                    'Content-Type': 'Application/json'
+                  }
                 
                 });
                     
