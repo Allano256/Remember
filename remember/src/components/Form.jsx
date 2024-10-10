@@ -38,6 +38,24 @@ function Form() {
 
 
   
+function getCSRFToken(){
+  let csrfToken=null;
+  if(document.cookie && document.cookie !== ''){
+    const cookies = document.cookie.split(';');
+    for (let i = 0; i < cookies.length; i++){
+      const cookie= cookies[i].trim();
+      if (cookie.startsWith('csrftoken=')){
+        csrfToken = cookie.substring('csrftoken='.length);
+        break;
+      }
+    }
+  }
+  return csrfToken;
+}
+
+
+
+  
 
   useEffect(function(){
     // This effect will check for the city and attach the new data to that city accordingly, lookup if this city exists,throw an error if it doesnt.
@@ -48,8 +66,18 @@ function Form() {
       try{
         setIsLoadingGeocoding(true);
         setGeoCodingError('');
-
-        const res = await fetch(`${BASE_URL}?latitude=${lat}&longitude=${lng}`);
+        const csrfToken =getCSRFToken();
+        const token = localStorage.getItem('token');
+        const res = await fetch(`${BASE_URL}?latitude=${lat}&longitude=${lng}`,
+          {
+            headers:{
+              'Authorization': `Bearer ${token}`,
+              'Content-Type': 'Application/json',
+              'X-CSRFToken': csrfToken,
+            }
+  
+          }
+        );
         const data = await res.json();
         if(!data.countryCode) throw new Error ('Click somewhere else, that is not a city please..😟');
       setCityName(data.city || data.locality ||  '');
@@ -75,7 +103,8 @@ function Form() {
        emoji,
        date,
        notes,
-       position: {lat, lng},
+        lat,
+        lng
   };
 
   await createCity(newCity);

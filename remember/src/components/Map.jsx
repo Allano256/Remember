@@ -45,8 +45,8 @@ function Map() {
     />
 
     {/* Here we loop over the cities and add a marker to that city */}
- { cities.map((city)  => (
-    <Marker position={[city.lat, city.lng]} key={city.id}>
+ { cities.map((city, index)  => (
+    <Marker position={[city.lat, city.lng]} key={city.id || index}>
     <Popup>
    <span>{city.emoji}</span><span>{city.cityName}</span>
     </Popup>
