@@ -3,6 +3,7 @@ import styles from './Signup.module.css';
 import Button from "../components/Button";
 import PageNavigation from "../components/PageNavigation";
 import { useNavigate } from "react-router-dom";
+import axios from 'axios'
 
 export default function Signup() {
   // Form state
@@ -13,11 +14,13 @@ export default function Signup() {
     password: "",
     password2: ""
   });
+  // const {username, email, password, password2} = formData;
 
   // Error state
-  const [error, setError] = useState("");
-  const [success, setSuccess] = useState(false)
+  const [error, setErrors] = useState();
+  // const [success, setSuccess] = useState(false)
   const navigate = useNavigate();
+ 
 
   // Handle input change
   const handleChange = (e) => {
@@ -29,79 +32,103 @@ export default function Signup() {
   };
 
   // Handle form submission
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
 
-    // Validate password and confirmPassword match
-    if (formData.password !== formData.password2) {
-      setError("Passwords do not match!");
-      return;
-    }
+  //   // Validate password and confirmPassword match
+  //   if (formData.password !== formData.password2) {
+  //     setError("Passwords do not match!");
+  //     return;
+  //   }
 
+// const handleChange = (event)=>{
+//     setFormData(
+//       {
+//         ...formData,
+//         [event.target.name]: event.target.value,
+//       }
+//     )
+//   }
     
     console.log("Form Submitted", formData);
 
 
-    function getCookie(name){
-      let cookieValue=null;
-      if(document.cookie && document.cookie !== ''){
-        const cookies = document.cookie.split(';');
-        for (let i = 0; i < cookies.length; i++){
-          const cookie= cookies[i].trim();
-          if (cookie.substring(0, name.length + 1)===(name + '=')){
-            cookieValue = decodeURIComponent(cookie(name.length + 1));
-            break;
-          }
-        }
-      }
-      return cookieValue;
-    }
+    // function getCookie(name){
+    //   let cookieValue=null;
+    //   if(document.cookie && document.cookie !== ''){
+    //     const cookies = document.cookie.split(';');
+    //     for (let i = 0; i < cookies.length; i++){
+    //       const cookie= cookies[i].trim();
+    //       if (cookie.substring(0, name.length + 1)===(name + '=')){
+    //         cookieValue = decodeURIComponent(cookie(name.length + 1));
+    //         break;
+    //       }
+    //     }
+    //   }
+    //   return cookieValue;
+    // }
     
+const handleSubmit= async(event)=>{
+  try {
+    await axios.post('/dj-rest-auth/register/', formData);
+    navigate('/login');
+    
+  } catch (error) {
+     console.error('Error submitting profile:', error);
+  }
+
+}
+
+ // useEffect(()=>{
+  //   if(success){
+  //     navigate('/login');
+  //   }
 
 
+  //   try {
+  //     // const csrfToken = getCookie('csrftoken');
+  //     // // const token = localStorage.getItem('token');
+  //     // const response = await fetch('http://127.0.0.1:8000/dj-rest-auth/register/', {
+  //     //   method: 'POST',
+  //     //   headers: {
+  //     //     'Content-Type': 'application/json',
+  //     //     'X-CSRFToken': csrfToken,
+  //     //   // 'Authorization':  `Token ${token}`
+  //     //   },
+  //     //   body: JSON.stringify(formData),
+  //     // });
+  //     // const data = await response.json();
 
-    try {
-      const csrfToken = getCookie('csrftoken');
-      // const token = localStorage.getItem('token');
-      const response = await fetch('http://127.0.0.1:8000/dj-rest-auth/register/', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'X-CSRFToken': csrfToken,
-        // 'Authorization':  `Token ${token}`
-        },
-        body: JSON.stringify(formData),
-      });
-      const data = await response.json();
+     
 
-      if (response.ok) {
-        setSuccess(data);
+  //     // if (response.ok) {
+  //     //   setSuccess(data);
         
       
-        setFormData({
-          username: "",
-          name: '',
-          email: "",
-          password: "",
-          password2: ""
-        });
-        setError("");
-      } else {
-        // const errorData = await response.json();
-        console.error('Error:', data);
-        setError(data.detail || 'An error occured')
-      }
-    } catch (error) {
-      console.error('Error submitting profile:', error);
-    }
-  };
+  //     //   setFormData({
+  //     //     username: "",
+  //     //     name: '',
+  //     //     email: "",
+  //     //     password: "",
+  //     //     password2: ""
+  //     //   });
+  //     //   setError("");
+  //     // } else {
+  //     //   // const errorData = await response.json();
+  //     //   console.error('Error:', data);
+  //     //   setError(data.detail || 'An error occured')
+  //     // }
+  //   } catch (error) {
+  //     console.error('Error submitting profile:', error);
+  //   }
+  // };
 
-  useEffect(()=>{
-    if(success){
-      navigate('/login');
-    }
+  // useEffect(()=>{
+  //   if(success){
+  //     navigate('/login');
+  //   }
 
-  },[success, navigate]);
+  // },[success, navigate]);
 
   return (
     <main className={styles.login}>
@@ -122,6 +149,7 @@ export default function Signup() {
              
           />
         </div>
+        
 
         {/* Email */}
         <div className={styles.row}>

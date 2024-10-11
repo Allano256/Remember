@@ -12,13 +12,15 @@ import Form from "./components/Form"
 import { CitiesProvider } from "./Contexts/CitiesContext"
 import {AuthProvider} from "./Contexts/AuthContext"
 import Signup from "./Pages/Signup"
+import './api/axiosDefaults'
 
  
 
 function App() {
 
   return (
-   <AuthProvider>
+   <AuthProvider >
+     
     <CitiesProvider>
     <BrowserRouter>
     <Routes>
@@ -43,6 +45,7 @@ function App() {
       </Routes>
       </BrowserRouter>
       </CitiesProvider>
+     
       </AuthProvider>
      
     
