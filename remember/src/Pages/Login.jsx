@@ -6,7 +6,7 @@ import Button from "../components/Button";
 import { Navigate, useNavigate } from "react-router-dom";
 
 export default function Login() {
-  const [username, setUsername] = useState(""); 
+  const [email, setUsername] = useState(""); 
   const [password, setPassword] = useState(""); 
 
   const { login, isAuthenticated } = useAuth(); 
@@ -14,8 +14,8 @@ export default function Login() {
   async function handleSubmit(e) {
     e.preventDefault();
 
-    if (username && password) {
-      await login(username, password); 
+    if (email && password) {
+      await login(email, password); 
   
       
       if (isAuthenticated) {
@@ -31,13 +31,13 @@ export default function Login() {
       <PageNavigation />
       <form className={styles.form} onSubmit={handleSubmit}>
         <div className={styles.row}>
-          <label htmlFor="username">Username</label>
+          <label htmlFor="email">Email</label>
           <input
             type="text"
-            id="username"
-            name="username"
+            id="email"
+            name="email"
             placeholder="start typing..."
-            value={username}
+            value={email}
             onChange={(e) => setUsername(e.target.value)} 
           />
         </div>

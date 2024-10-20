@@ -3,7 +3,7 @@ import CityItem from './CityItem';
 import styles from './CityList.module.css'
 import Spinner from './Spinner'
 import Message from "./Message"
-import { useCities } from '../Contexts/CitiesContext';
+import { useCities } from '../contexts/CitiesContext'
 
 function CityList() {
     // This function will return a list of all the cities visited.

@@ -24,7 +24,7 @@ function CitiesProvider({children}) {
                 setIsLoading(true)
                
                 const token=localStorage.getItem('token');
-                const res =  await fetch(`${BASE_URL}/cities/`, 
+                const res =  await fetch(`${BASE_URL}/api/v1/cities/`, 
                   {
                     headers: {
                       'Authorization': `Bearer ${token}`,
@@ -53,7 +53,7 @@ function CitiesProvider({children}) {
               try {
                 setIsLoading(true)
                 const token=localStorage.getItem('token');
-                const res =  await fetch(`${BASE_URL}/cities/${id}`,
+                const res =  await fetch(`${BASE_URL}/api/v1/cities/${id}`,
                   {
                     headers: {
                       'Authorization': `Bearer ${token}`,
@@ -82,7 +82,7 @@ function CitiesProvider({children}) {
                 setIsLoading(true)
                 const csrfToken =getCSRFToken();
                 const token = localStorage.getItem('token');
-                const res =  await fetch(`${BASE_URL}/cities/`, {
+                const res =  await fetch(`${BASE_URL}/api/v1/cities/`, {
                   method:'POST',
                   body: JSON.stringify(newCity),
                   headers: {
@@ -117,7 +117,7 @@ function CitiesProvider({children}) {
               try {
                 setIsLoading(true)
                 const token =localStorage.getItem('token');
-                await fetch(`${BASE_URL}/cities/${id}`, {
+                await fetch(`${BASE_URL}/api/v1/cities/${id}`, {
                   method:'DELETE',
                   headers: {
                     'Authorization': `Bearer ${token}`,

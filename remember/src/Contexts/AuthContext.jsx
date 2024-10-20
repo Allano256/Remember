@@ -29,14 +29,14 @@ function AuthProvider({ children }) {
 
   // Login function to authenticate user with backend
 
-  async function login(username, password) {
+  async function login(email, password) {
     try{
-      const response= await fetch("http://127.0.0.1:8000/login/", {
+      const response= await fetch("http://127.0.0.1:8000/api/v1/authlogin/", {
         method:'POST',
         headers: {
           'Content-Type':'application/json',
         },
-        body: JSON.stringify({username, password}),
+        body: JSON.stringify({email, password}),
 
       });
        
