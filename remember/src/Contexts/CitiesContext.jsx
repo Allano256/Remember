@@ -7,18 +7,7 @@ const CitiesContext = createContext();
 
 function getCSRFToken(){
   return localStorage.getItem('refresh_token');
-  // let csrfToken=null;
-  // if(document.cookie && document.cookie !== ''){
-  //   const cookies = document.cookie.split(';');
-  //   for (let i = 0; i < cookies.length; i++){
-  //     const cookie= cookies[i].trim();
-  //     if (cookie.startsWith('csrftoken=')){
-  //       csrfToken = cookie.substring('csrftoken='.length);
-  //       break;
-  //     }
-  //   }
-  // }
-  // return csrfToken;
+  
 }
 
 function CitiesProvider({children}) {
@@ -38,7 +27,7 @@ function CitiesProvider({children}) {
                 const res =  await fetch(`${BASE_URL}/cities/`, 
                   {
                     headers: {
-                      'Authorization': `Token ${token}`,
+                      'Authorization': `Bearer ${token}`,
                       'Content-Type': 'Application/json',
                       
                     }
@@ -67,8 +56,8 @@ function CitiesProvider({children}) {
                 const res =  await fetch(`${BASE_URL}/cities/${id}`,
                   {
                     headers: {
-                      'Authorization': `Token ${token}`,
-                      'Content-Type': 'application/json'
+                      'Authorization': `Bearer ${token}`,
+                      'Content-Type': 'Application/json'
                     }
                   }
                 );
@@ -98,8 +87,8 @@ function CitiesProvider({children}) {
                   body: JSON.stringify(newCity),
                   headers: {
                     
-                    'Authorization': `Token ${token}`,
-                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${token}`,
+                    'Content-Type': 'Application/json',
                     'X-CSRFToken': csrfToken,
                    
                    
@@ -131,7 +120,7 @@ function CitiesProvider({children}) {
                 await fetch(`${BASE_URL}/cities/${id}`, {
                   method:'DELETE',
                   headers: {
-                    'Authorization': `Token ${token}`,
+                    'Authorization': `Bearer ${token}`,
                     'Content-Type': 'Application/json'
                   }
                 
