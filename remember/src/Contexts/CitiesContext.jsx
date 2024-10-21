@@ -1,6 +1,6 @@
 import { createContext, useContext, useEffect, useState } from "react";
 
-const BASE_URL = "http://127.0.0.1:8000"; 
+const BASE_URL = "http://127.0.0.1:8000/api/v1"; 
 
 const CitiesContext = createContext();
 
@@ -38,7 +38,7 @@ function CitiesProvider({children}) {
                 const res =  await fetch(`${BASE_URL}/cities/`, 
                   {
                     headers: {
-                      'Authorization': `Token ${token}`,
+                      'Authorization': `Bearer ${token}`,
                       'Content-Type': 'Application/json',
                       
                     }
@@ -67,7 +67,7 @@ function CitiesProvider({children}) {
                 const res =  await fetch(`${BASE_URL}/cities/${id}`,
                   {
                     headers: {
-                      'Authorization': `Token ${token}`,
+                      'Authorization': `Bearer ${token}`,
                       'Content-Type': 'application/json'
                     }
                   }
@@ -93,12 +93,13 @@ function CitiesProvider({children}) {
                 setIsLoading(true)
                 const csrfToken =getCSRFToken();
                 const token = localStorage.getItem('token');
+                const city={...newCity, city_name:newCity.cityName}
                 const res =  await fetch(`${BASE_URL}/cities/`, {
                   method:'POST',
-                  body: JSON.stringify(newCity),
+                  body: JSON.stringify(city),
                   headers: {
                     
-                    'Authorization': `Token ${token}`,
+                    'Authorization': `Bearer ${token}`,
                     'Content-Type': 'application/json',
                     'X-CSRFToken': csrfToken,
                    
@@ -131,7 +132,7 @@ function CitiesProvider({children}) {
                 await fetch(`${BASE_URL}/cities/${id}`, {
                   method:'DELETE',
                   headers: {
-                    'Authorization': `Token ${token}`,
+                    'Authorization': `Bearer ${token}`,
                     'Content-Type': 'Application/json'
                   }
                 
