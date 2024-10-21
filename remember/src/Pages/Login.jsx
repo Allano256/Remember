@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 
 
  export default function  Login() {
-const [username, setUsername] = useState(" ");
+const [email, setUsername] = useState(" ");
 const [password, setPassword] = useState(" ");
 
 const  {login, isAuthenticated} =useAuth();
@@ -15,7 +15,7 @@ const navigate = useNavigate();
 
 function handleSubmitEvent (e){
     e.preventDefault();
-    if(username && password) login(username,password)
+    if(email && password) login(email,password)
 }
 
 useEffect(function (){
@@ -27,8 +27,8 @@ useEffect(function (){
             <PageNavigation />
             <form className= {styles.form} onSubmit={handleSubmitEvent}>
                 <div className={styles.row} >
-                    <label htmlFor="username">Username </label>
-                    <input type="username" id="username" placeholder="start typing..." name="username" onChange={(e) => setUsername(e.target.value)} value={username} />
+                    <label htmlFor="email">Email </label>
+                    <input type="email" id="email" placeholder="example@....." name="email" onChange={(e) => setUsername(e.target.value)} value={email} />
                 </div>
                 <div className={styles.row} >
                     <label htmlFor="password">Password</label>

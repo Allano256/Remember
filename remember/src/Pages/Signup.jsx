@@ -7,8 +7,8 @@ import { useNavigate } from "react-router-dom";
 export default function Signup() {
   // Form state
   const [formData, setFormData] = useState({
-    username: "",
-    name:'',
+    first_name: "",
+    last_name: "",
     email: "",
     password: "",
     password2: ""
@@ -63,7 +63,7 @@ export default function Signup() {
     try {
       const csrfToken = getCookie('csrftoken');
       // const token = localStorage.getItem('token');
-      const response = await fetch('http://127.0.0.1:8000/dj-rest-auth/register/', {
+      const response = await fetch('http://127.0.0.1:8000/api/v1/auth/signup/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -79,8 +79,9 @@ export default function Signup() {
         
       
         setFormData({
-          username: "",
-          name: '',
+          first_name: "",
+          last_name: "",
+          
           email: "",
           password: "",
           password2: ""
@@ -110,15 +111,28 @@ export default function Signup() {
         
         {/* Username */}
         <div className={styles.row}>
-          <label htmlFor="username">Username</label>
+          <label htmlFor="first_name">First Name</label>
           <input
-            id="username"
+            id="first_name"
             type="text"
-            name="username"
-            value={formData.username}
+            name="first_name"
+            value={formData.first_name}
             onChange={handleChange}
             required
-            autoComplete="new-password"
+            
+             
+          />
+        </div>
+        <div className={styles.row}>
+          <label htmlFor="last_name">Last Name</label>
+          <input
+            id="last_name"
+            type="text"
+            name="last_name"
+            value={formData.last_name}
+            onChange={handleChange}
+            required
+            
              
           />
         </div>
