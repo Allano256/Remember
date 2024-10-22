@@ -15,7 +15,7 @@ function CityItem({city}) {
   const {currentCity, deleteCity} = useCities();
 
 
-    const {city_name, emoji, date, id, lat, lng} = city;
+    const {city_name,  emoji, date, id, lat, lng} = city;
     
 
     function handleClick(e){

@@ -10,6 +10,7 @@ import { useUrlPosition } from "../Hooks/useUrlPosition";
 function Map() {
 
     const{cities} = useCities();
+    console.log("Cities from backend:", cities);
    
     const [mapPosition, setMapPosition] = useState([40, 0])
     
@@ -19,7 +20,7 @@ function Map() {
 
    useEffect(function(){
    
-    if(mapLat && mapLng) setMapPosition([mapLat, mapLng])
+    if(mapLat && mapLng) setMapPosition([parseFloat(mapLat), parseFloat(mapLng)])
    },[mapLat, mapLng])
 
    useEffect(function(){
@@ -33,6 +34,25 @@ function Map() {
       <Button type='position' onClick={getPosition}
       >  {isLoadingPosition ? "Loading..." : "Use your position..." } </Button>
      ) } 
+
+
+{/* 
+useEffect(function(){
+   
+   if(mapLat && mapLng) setMapPosition([mapLat, mapLng])
+  },[mapLat, mapLng])
+
+  useEffect(function(){
+   if(geolocationPosition) setMapPosition([geolocationPosition.lat, geolocationPosition.lng]);
+
+  }, [geolocationPosition])
+
+   return (
+       <div className={styles.mapContainer}> 
+    {!geolocationPosition  &&  (
+     <Button type='position' onClick={getPosition}
+     >  {isLoadingPosition ? "Loading..." : "Use your position..." } </Button>
+    ) }  */}
         
         <MapContainer 
         center={mapPosition}
@@ -50,7 +70,8 @@ function Map() {
     <Popup>
    <span>{city.emoji}</span><span>{city.cityName}</span>
     </Popup>
-</Marker> ))} 
+</Marker> )
+)} 
 
 
 <DetectClick />

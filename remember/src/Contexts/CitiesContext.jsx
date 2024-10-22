@@ -1,8 +1,11 @@
 import { createContext, useContext, useEffect, useState } from "react";
+import {jwtDecode} from 'jwt-decode';
+
 
 const BASE_URL = "http://127.0.0.1:8000/api/v1"; 
 
 const CitiesContext = createContext();
+
 
 
 function getCSRFToken(){
@@ -93,7 +96,13 @@ function CitiesProvider({children}) {
                 setIsLoading(true)
                 const csrfToken =getCSRFToken();
                 const token = localStorage.getItem('token');
-                const city={...newCity, city_name:newCity.cityName}
+                
+                const decoded = jwtDecode(token);
+                console.log(decoded);
+                const {user_id} = decoded;
+
+                const city={...newCity, city_name:newCity.cityName, user:user_id}
+
                 const res =  await fetch(`${BASE_URL}/cities/`, {
                   method:'POST',
                   body: JSON.stringify(city),
@@ -111,6 +120,8 @@ function CitiesProvider({children}) {
                  
                 //  This will add the newly created city to the list
              setCities(cities=> [...cities, data]);
+             console.log("Updated cities state:", cities);
+             console.log('updatedcity>>>',cities);
               ; 
                        
               } catch{
