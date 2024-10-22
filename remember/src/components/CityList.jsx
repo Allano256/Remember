@@ -7,9 +7,11 @@ import { useCities } from '../Contexts/CitiesContext';
 
 function CityList() {
     // This function will return a list of all the cities visited.
-
+    console.log("CityList rendered");
     
     const {cities, isLoading} = useCities();
+
+    console.log("Cities in CityList:", cities);
     
 
     if(isLoading) return <Spinner />;
@@ -20,6 +22,7 @@ function CityList() {
 
     return (
         <ul className={styles.cityList} >
+                
            {cities.map((city, index)=> <CityItem city={city} key={`${city.id}-${index}`} />  )}
         </ul>
     )

@@ -10,18 +10,7 @@ const CitiesContext = createContext();
 
 function getCSRFToken(){
   return localStorage.getItem('refresh_token');
-  // let csrfToken=null;
-  // if(document.cookie && document.cookie !== ''){
-  //   const cookies = document.cookie.split(';');
-  //   for (let i = 0; i < cookies.length; i++){
-  //     const cookie= cookies[i].trim();
-  //     if (cookie.startsWith('csrftoken=')){
-  //       csrfToken = cookie.substring('csrftoken='.length);
-  //       break;
-  //     }
-  //   }
-  // }
-  // return csrfToken;
+  
 }
 
 function CitiesProvider({children}) {
@@ -119,10 +108,11 @@ function CitiesProvider({children}) {
                  const data = await res.json(); 
                  
                 //  This will add the newly created city to the list
-             setCities(cities=> [...cities, data]);
-             console.log("Updated cities state:", cities);
-             console.log('updatedcity>>>',cities);
-              ; 
+            //  setCities(cities=> [...cities, data]);
+            console.log("Before adding city:", cities);
+             setCities(prevCities=> [...prevCities, data]);
+             console.log("After adding city:", [...cities, data]);
+              
                        
               } catch{
                 alert('Error creating the city ...')
