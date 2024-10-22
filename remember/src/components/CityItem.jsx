@@ -27,7 +27,7 @@ function CityItem({city}) {
 
     return (
         <li >
-          <Link  className= {`${styles.city}   `} to={`${id}?lat=${lat}&lng=${lng}`} >
+          <Link  className= {`${styles.city} `} to={`${id}?lat=${lat}&lng=${lng}`} >
           {/* <Link  className= {`${styles.city} ${id === currentCity.id ? styles["city--active"] : "" }  `} to={`${id}?lat=${lat}&lng=${lng}`} ></Link> */}
           <span className={styles.emoji} >{emoji} </span>
           <h3 className={styles.name}>{city_name} </h3>

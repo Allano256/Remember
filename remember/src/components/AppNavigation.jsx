@@ -3,18 +3,20 @@ import styles from "./AppNavigation.module.css"
 
 function AppNavigation() {
     return (
-        <nav className={styles.nav} >
-           <ul>
-            <li>
-                <NavLink to="cities">Cities</NavLink>
-            </li>
-            <li>
-                <NavLink to="countries">Countries</NavLink> 
-            </li>
+
+        <h1>Visited Cities</h1>
+        // <nav className={styles.nav} >
+        //    <ul>
+        //     <li>
+        //         <NavLink to="cities">Cities</NavLink>
+        //     </li>
+        //     {/* <li>
+        //         <NavLink to="countries">Countries</NavLink> 
+        //     </li> */}
            
-           </ul>
+        //    </ul>
             
-        </nav>
+        // </nav>
     )
 }
 

@@ -51,6 +51,7 @@ function CitiesProvider({children}) {
           },[]);
 
           async function getCity(id){
+            console.log(id)
 
             // This function will get one specific City using the id.
               try {
@@ -130,7 +131,7 @@ function CitiesProvider({children}) {
               try {
                 setIsLoading(true)
                 const token =localStorage.getItem('token');
-                await fetch(`${BASE_URL}/cities/${id}`, {
+                await fetch(`${BASE_URL}/cities/${id}/`, {
                   method:'DELETE',
                   headers: {
                     'Authorization': `Bearer ${token}`,
