@@ -2,7 +2,7 @@ import { createContext, useContext, useEffect, useState } from "react";
 import {jwtDecode} from 'jwt-decode';
 
 
-const BASE_URL = "https://drf-api-remember-f742a049740b.herokuapp.com"; 
+const API_BASE_URL = process.env.REACT_APP_API_URL;
 
 const CitiesContext = createContext();
 
@@ -27,7 +27,7 @@ function CitiesProvider({children}) {
                 setIsLoading(true)
                
                 const token=localStorage.getItem('token');
-                const res =  await fetch(`${BASE_URL}/cities/`, 
+                const res =  await fetch(`${API_BASE_URL}/cities/`, 
                   {
                     headers: {
                       'Authorization': `Bearer ${token}`,
@@ -57,7 +57,7 @@ function CitiesProvider({children}) {
               try {
                 setIsLoading(true)
                 const token=localStorage.getItem('token');
-                const res =  await fetch(`${BASE_URL}/cities/${id}`,
+                const res =  await fetch(`${API_BASE_URL}/cities/${id}`,
                   {
                     headers: {
                       'Authorization': `Bearer ${token}`,
@@ -93,7 +93,7 @@ function CitiesProvider({children}) {
 
                 const city={...newCity, city_name:newCity.cityName, user:user_id}
 
-                const res =  await fetch(`${BASE_URL}/cities/`, {
+                const res =  await fetch(`${API_BASE_URL}/cities/`, {
                   method:'POST',
                   body: JSON.stringify(city),
                   headers: {
@@ -131,7 +131,7 @@ function CitiesProvider({children}) {
               try {
                 setIsLoading(true)
                 const token =localStorage.getItem('token');
-                await fetch(`${BASE_URL}/cities/${id}/`, {
+                await fetch(`${API_BASE_URL}/cities/${id}/`, {
                   method:'DELETE',
                   headers: {
                     'Authorization': `Bearer ${token}`,

@@ -63,7 +63,7 @@ export default function Signup() {
     try {
       const csrfToken = getCookie('csrftoken');
       // const token = localStorage.getItem('token');
-      const response = await fetch('http://127.0.0.1:8000/api/v1/auth/signup/', {
+      const response = await fetch(`{API_BASE_URL}/auth/signup/`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
