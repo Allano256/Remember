@@ -1,15 +1,11 @@
-
-
-
 {
   "name": "remember",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "engines": {
-    "node": ">=16.0.0" 
+    "node": ">=16.0.0"
   },
-
   "scripts": {
     "dev": "vite",
     "build": "vite build ",
@@ -19,6 +15,7 @@
     "start": "vite preview"
   },
   "dependencies": {
+    "vite": "^4.4.5", 
     "json-server": "^1.0.0-beta.3",
     "jwt-decode": "^4.0.0",
     "leaflet": "^1.9.4",
@@ -37,7 +34,7 @@
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
-    "vite": "^4.4.5",
+    "vite": "^4.5.5",
     "vite-plugin-eslint": "^1.8.1"
   }
 }
