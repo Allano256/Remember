@@ -4,6 +4,8 @@ import Button from "../components/Button";
 import PageNavigation from "../components/PageNavigation";
 import { useNavigate } from "react-router-dom";
 
+const API_BASE_URL = 'https://drf-api-remember-f742a049740b.herokuapp.com/api/v1'
+
 export default function Signup() {
   // Form state
   const [formData, setFormData] = useState({
@@ -63,7 +65,7 @@ export default function Signup() {
     try {
       const csrfToken = getCookie('csrftoken');
       // const token = localStorage.getItem('token');
-      const response = await fetch(`{API_BASE_URL}/auth/signup/`, {
+      const response = await fetch(`${API_BASE_URL}/auth/signup/`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

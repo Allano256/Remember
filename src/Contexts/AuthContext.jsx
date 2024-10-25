@@ -1,6 +1,9 @@
 import { createContext, useContext, useReducer } from "react";
 
+
+const API_BASE_URL = 'https://drf-api-remember-f742a049740b.herokuapp.com/api/v1'
 const AuthContext = createContext();
+
 
 const initialState = {
   user: null,
@@ -29,7 +32,7 @@ function AuthProvider({ children }) {
 
   async function login(email, password) {
     try{
-      const response= await fetch(`{API_BASE_URL}/auth/login/`, {
+      const response= await fetch(`${API_BASE_URL}/auth/login/`, {
         method:'POST',
         headers: {
           'Content-Type':'application/json',
