@@ -40,7 +40,7 @@ function CitiesProvider({children}) {
                 );
                  const data = await res.json();
                 console.log(data)
-                 setCities(data.length > 0 ? data : []);
+                 setCities(data);
                
               } catch{
                 alert('Error loading the data...')
