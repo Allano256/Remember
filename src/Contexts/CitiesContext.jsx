@@ -2,7 +2,7 @@ import { createContext, useContext, useEffect, useState } from "react";
 import {jwtDecode} from 'jwt-decode';
 
 
-const API_BASE_URL = process.env.REACT_APP_API_URL;
+const API_BASE_URL = 'https://drf-api-remember-f742a049740b.herokuapp.com/api/v1'
 
 const CitiesContext = createContext();
 
