@@ -113,13 +113,13 @@ function City() {
           <div className={styles.row}>
             <label>Emoji</label>
             <span>{formData.emoji}</span>
-            {/* <input
+            <input
               type="text"
               name="emoji"
               value={formData.emoji}
               onChange={handleChange}
               required
-            /> */}
+            />
           </div>
           <div className={styles.row}>
             <label>Date</label>
