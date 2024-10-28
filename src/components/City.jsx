@@ -136,10 +136,11 @@ function City() {
               onChange={handleChange}
             />
           </div>
-          <button type="submit">Save</button>
-          <button type="button" onClick={() => setIsEditing(false)}>
+          {/* <button type="submit">Save</button> */}
+          <BackButton />
+          <Button type="button" onClick={() => setIsEditing(false)}>
             Cancel
-          </button>
+          </Button>
         </form>
       )}
     </div>
