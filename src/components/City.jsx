@@ -72,8 +72,15 @@ function City() {
       <div>
       {/* <BackButton /> */}
       <ActionButton />
+      
+      </div>
+
+      <div>
+      {/* <BackButton /> */}
+   
       <ActionButton isEdit={true} onEdit={() => console.log('Edit action')} />
       </div>
+
     </div>
   );
 }
