@@ -8,6 +8,8 @@ function EditButton(){
         <Button type='edit' onClick={(e)=> {
             e.preventDefault();
 
+            
+
         }}> &larr; Edit </Button>
     )
 
