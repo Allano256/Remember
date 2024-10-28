@@ -125,6 +125,29 @@ function CitiesProvider({children}) {
            
           }
 
+          async function updateCity(id, updatedCity){
+            try {
+              setIsLoading(true);
+              const csrfToken = getCSRFToken();
+              const token = localStorage.getItem('token');
+              const res = await fetch(`${API_BASE_URL}/cities/${id}/`, {
+                method: 'PUT',
+                body : JSON.stringify(updatedCity),
+                headers: {
+                  'Authorization': `Bearer ${token}`,
+                  'Content-Type': 'application',
+                  'X-CSRF Token' : csrfToken,
+                }
+              });
+              const data = await res.json();
+              setCities(prevCities => prevCities.map(city => city.id === id ? data : city))
+            } catch {
+              alert('Error updating City...')
+            } finally {
+              setIsLoading(false);
+            }
+          }
+
 
           
           async function deleteCity(id){
@@ -162,6 +185,7 @@ function CitiesProvider({children}) {
     currentCity, 
     getCity,
     createCity,
+    updateCity,
     deleteCity,
   }}>
     {children}
