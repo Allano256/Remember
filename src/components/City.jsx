@@ -3,7 +3,8 @@ import styles from "./City.module.css";
 import { useEffect } from "react";
 import { useCities } from "../Contexts/CitiesContext";
 import Spinner from "./Spinner";
-import ActionButton from "./BackButton";
+import BackButton from "./BackButton";
+import EditButton from "./EditButton";
 
 const formatDate = (date) =>
   new Intl.DateTimeFormat("en", {
@@ -69,17 +70,15 @@ function City() {
         </a>
       </div>
 
-      <div>
-      {/* <BackButton /> */}
-      <ActionButton />
-      
-      </div>
 
       <div>
-      {/* <BackButton /> */}
-   
-      <ActionButton isEdit={true} onEdit={() => console.log('Edit action')} />
+        <BackButton />
       </div>
+      <div>
+        <EditButton />
+      </div>
+     
+      
 
     </div>
   );
