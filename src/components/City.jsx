@@ -6,6 +6,7 @@ import Spinner from "./Spinner";
 import BackButton from "./BackButton";
 import EditButton from "./EditButton";
 
+
 const formatDate = (date) =>
   new Intl.DateTimeFormat("en", {
     day: "numeric",
@@ -136,11 +137,10 @@ function City() {
               onChange={handleChange}
             />
           </div>
-          {/* <button type="submit">Save</button> */}
-          <BackButton />
-          <Button type="button" onClick={() => setIsEditing(false)}>
+          <button type="submit">Save</button>
+          <button type="button" onClick={() => setIsEditing(false)}>
             Cancel
-          </Button>
+          </button>
         </form>
       )}
     </div>
