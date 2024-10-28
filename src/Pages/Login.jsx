@@ -19,7 +19,9 @@ function handleSubmitEvent (e){
 }
 
 useEffect(function (){
-  if (isAuthenticated) navigate('/app', {replace: true})
+  if (isAuthenticated)  {
+     window.location.href="/app/cities"
+  } 
 }, [isAuthenticated, navigate])
 
     return (
