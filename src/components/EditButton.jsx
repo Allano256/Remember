@@ -1,19 +1,11 @@
-import Button from "./Button";
-import { useNavigate } from "react-router-dom";
+import React from 'react';
 
-function EditButton(){
-
-    const navigate = useNavigate();
+function EditButton({ onClick }) {
     return (
-        <Button type='edit' onClick={(e)=> {
-            e.preventDefault();
-
-            
-
-        }}> &larr; Edit </Button>
-    )
-
-
+        <button onClick={onClick} type="button">
+            ✎ Edit
+        </button>
+    );
 }
 
 export default EditButton;
