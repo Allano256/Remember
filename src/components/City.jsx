@@ -21,7 +21,7 @@ function City() {
   const [isEditing, setIsEditing] = useState(false);
   const [formData, setFormData] = useState({
     city_name: '',
-    emoji: '',
+    // emoji: '',
     date: '',
     notes: ''
   });
@@ -37,7 +37,7 @@ function City() {
     if (currentCity) {
       setFormData({
         city_name: currentCity.city_name,
-        emoji: currentCity.emoji,
+        // emoji: currentCity.emoji,
         date: currentCity.date,
         notes: currentCity.notes || '',
       });
@@ -110,7 +110,7 @@ function City() {
               required
             />
           </div>
-          <div className={styles.row}>
+          {/* <div className={styles.row}>
             <label>Emoji</label>
             <input
               type="text"
@@ -119,7 +119,7 @@ function City() {
               onChange={handleChange}
               required
             />
-          </div>
+          </div> */}
           <div className={styles.row}>
             <label>Date</label>
             <input
