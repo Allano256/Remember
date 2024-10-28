@@ -3,7 +3,7 @@ import styles from "./City.module.css";
 import { useEffect } from "react";
 import { useCities } from "../Contexts/CitiesContext";
 import Spinner from "./Spinner";
-import BackButton from "./BackButton";
+import ActionButton from "./BackButton";
 
 const formatDate = (date) =>
   new Intl.DateTimeFormat("en", {
@@ -70,8 +70,9 @@ function City() {
       </div>
 
       <div>
-      <BackButton />
-       
+      {/* <BackButton /> */}
+      <ActionButton />
+      <ActionButton isEdit={true} onEdit={() => console.log('Edit action')} />
       </div>
     </div>
   );
