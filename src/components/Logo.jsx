@@ -1,16 +1,15 @@
 import {  Link } from "react-router-dom"
+import styles from "./Logo.module.css";
 
 
 function Logo() {
     return (
-        <nav>
-            <ul>
-               <Link  to="/"> <li>Remember</li></Link> 
-            </ul>
-        </nav>
-   
+       
+        <Link to="/">
+        <img src="/logo.png" alt="Remember Logo" className{styles.logo} />;
+        </Link>
     )
     
 }
 
-export default Logo
+export default Logo;
