@@ -5,19 +5,21 @@ import Logo from "./Logo";
 function PageNavigation() {
     return (
         <nav className={styles.nav}>
-            <ul>
+          
                <Logo />
+               
+               <ul>
                 
                 <li>
-                    <NavLink to="/about">About </NavLink> 
+                    <NavLink to="/about"  className={styles.ctaLink3}>About </NavLink> 
                 </li>
                 
                 <li>
-                    <NavLink to="/login" className={styles.ctaLink}>Login</NavLink> 
+                    <NavLink to="/login" className={styles.ctaLink2}>Login</NavLink> 
                 </li>
 
                 <li>
-                    <NavLink to="/signup" className={styles.ctaLink}>Signup</NavLink> 
+                    <NavLink to="/signup" className={styles.ctaLink1}>Signup</NavLink> 
                 </li>
                
                 

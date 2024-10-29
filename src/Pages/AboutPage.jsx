@@ -4,7 +4,7 @@ import styles from "./AboutPage.module.css"
 
 export default  function AboutPage() {
     return (
-       <main className={styles.abt} >
+       <main className={styles.about} >
         <PageNavigation />
 
         <section>
