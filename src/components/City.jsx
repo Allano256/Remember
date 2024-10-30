@@ -1,11 +1,13 @@
 import { useParams } from "react-router-dom";
 import styles from "./City.module.css";
 
+
 import { useEffect, useState } from "react";
 import { useCities } from "../Contexts/CitiesContext";
 import Spinner from "./Spinner";
 import BackButton from "./BackButton";
 import EditButton from "./EditButton";
+import Button from "./Button";
 
 
 const formatDate = (date) =>
@@ -139,7 +141,9 @@ function City() {
               onChange={handleChange}
             />
           </div>
-          <button type="submit">Save</button>
+
+          <Button className={styles.btn} type="submit">Save</Button>
+
           <button type="button" onClick={() => setIsEditing(false)}>
             Cancel
           </button>
