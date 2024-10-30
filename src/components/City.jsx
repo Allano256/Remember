@@ -144,7 +144,7 @@ function City() {
 
           <button class='btn' type="submit">Save</button>
 
-          <button type="button" onClick={() => setIsEditing(false)}>
+          <button class="btn-btn" onClick={() => setIsEditing(false)}>
             Cancel
           </button>
         </form>
