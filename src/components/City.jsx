@@ -142,7 +142,7 @@ function City() {
             />
           </div>
 
-          <Button className={styles.btn} type="submit">Save</Button>
+          <button class='btn' type="submit">Save</button>
 
           <button type="button" onClick={() => setIsEditing(false)}>
             Cancel
