@@ -136,7 +136,7 @@ function CitiesProvider({children}) {
                 headers: {
                   'Authorization': `Bearer ${token}`,
                   'Content-Type': 'application/json',
-                  'X-CSRF Token' : csrfToken,
+                  'X-CSRF-Token' : csrfToken,
                 }
               });
               const data = await res.json();
