@@ -135,14 +135,14 @@ function CitiesProvider({children}) {
                 body : JSON.stringify(updatedCity),
                 headers: {
                   'Authorization': `Bearer ${token}`,
-                  'Content-Type': 'application',
+                  'Content-Type': 'application/json',
                   'X-CSRF Token' : csrfToken,
                 }
               });
               const data = await res.json();
               setCities(prevCities => prevCities.map(city => city.id === id ? data : city))
-            } catch {
-              alert('Error updating City...')
+            } catch(e) {
+              alert(e)
             } finally {
               setIsLoading(false);
             }
