@@ -12,7 +12,7 @@ Its a responsive site as illustrated below.
 # User stories
 
 Features in this project were structured based on the
-[user stories](https://github.com/users/Allano256/projects/7)
+[user stories](https://github.com/users/Allano256/projects/7/views/1)
 
 <ul>
 <li><strong>Description Of Service:</strong> This field t describes the specific service, feature, or screen that the user story relates to.</li>
