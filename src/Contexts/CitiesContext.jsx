@@ -126,7 +126,7 @@ function CitiesProvider({children}) {
           }
 
           async function updateCity(id, updatedCity){
-            // try {
+            try {
               setIsLoading(true);
               const csrfToken = getCSRFToken();
               const token = localStorage.getItem('token');
@@ -137,8 +137,6 @@ function CitiesProvider({children}) {
               updatedCity['user']=user_id;
 
              
-
-
               const res = await fetch(`${API_BASE_URL}/cities/${id}/`, {
                 method: 'PUT',
                 body : JSON.stringify(updatedCity),
@@ -151,11 +149,11 @@ function CitiesProvider({children}) {
               });
               const data = await res.json();
               setCities(prevCities => prevCities.map(city => city.id === id ? data : city))
-            // } catch(e) {
-              // alert(e)
-            // } finally {
-              // setIsLoading(false);
-            // }
+            } catch(e) {
+              alert(e)
+            } finally {
+              setIsLoading(false);
+            }
           }
 
 
