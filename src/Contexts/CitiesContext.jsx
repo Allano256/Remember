@@ -130,9 +130,19 @@ function CitiesProvider({children}) {
               setIsLoading(true);
               const csrfToken = getCSRFToken();
               const token = localStorage.getItem('token');
+              
+              const decoded = jwtDecode(token);
+              console.log(decoded);
+              const {user_id} = decoded;
+              updatedCity[user]=user_id;
+
+             
+
+
               const res = await fetch(`${API_BASE_URL}/cities/${id}/`, {
                 method: 'PUT',
                 body : JSON.stringify(updatedCity),
+                
                 headers: {
                   'Authorization': `Bearer ${token}`,
                   'Content-Type': 'application/json',
