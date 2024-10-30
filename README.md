@@ -7,12 +7,12 @@ The application is powered by React-Vite. The user interface is crafted using a 
 
 Its a responsive site as illustrated below.
 
-![Remember](booking/static/booking/images/responsive.png)
+![Remember]()
 
 # User stories
 
 Features in this project were structured based on the
-[user stories](https://github.com/users/Allano256/projects/3)
+[user stories](https://github.com/users/Allano256/projects/7)
 
 <ul>
 <li><strong>Description Of Service:</strong> This field t describes the specific service, feature, or screen that the user story relates to.</li>
@@ -28,7 +28,7 @@ Features in this project were structured based on the
  <li>These different features enable the user to register their details as customers, be able to log in as registered users and make start on their journey to record their activities. They can also always come back and retrieve their activities over time but we intentionally didnt allow an edit functionality as this would not make sense to a patient that forgets things in a second to come back after an hour, day or two to try and edit something.</li>
 </ul>
 
-![restaurant_app](booking/static/booking/images/navbar.png)
+![Remember](public/NavbarPage.png)
 
 <ul> 
 <ol> <strong>The landing page</strong> </ol>
@@ -36,7 +36,7 @@ Features in this project were structured based on the
 <li>In the fore front we just have wordings welcoming you to the application.  </li>
 </ul>
 
-![restaurant_app](booking/static/booking/images/landing1.png)
+![Remember](public/landingPage.png)
 
 <ul> 
 <ol> <strong>The Footer</strong> </ol>
@@ -44,23 +44,23 @@ Features in this project were structured based on the
 
 </ul>
 
-![restaurant_app](booking/static/booking/images/foot.png)
+![Remember](public/footerPage.png)
 
 <ul> 
 <ol> <strong>Create City</strong></ol>
 <li>As a logged in user, if you have not visited yet any cities...you will be prompted to click on the map to get started using geolocation to place also a popup to that position. Then a form will be created which is autofilled with the date and city name and all you have to do is add the notes.</li>
 </ul>
 
-![restaurant_app](booking/static/booking/images/reserveForm.png)
+![Remember](public/createCity.png)
 
 <ul> 
 <ol> <strong>List of cities</strong></ol>
 <li>
 The logged in user can always come back and retrieve a list of all the cities they have noted down in their account, and also get a single city aswell to dive deeper and read the notes attached to the city.</li>
 
-![restaurant_app](booking/static/booking/images/booking_list.png)
+![Remember](public/AllCities.png)
 
-<li>Intentionally we ignored the CRUD functionality of Update basing on the purpose of our application, but this is something we considering to implement depending on the observations that will be forthcoming. <li>
+<li>A logged in user also has the ablility to edit notes or date regarding their activity aswell. <li>
 </ul>
 
 <ul>
@@ -69,39 +69,24 @@ The logged in user can always come back and retrieve a list of all the cities th
 <li>As a signedup user, they can have access to their Remember application and can access all the features on it. </li>
 </ul>
 
-![restaurant_app](booking/static/booking/images/register.png)
+![Remember](public/signupPage.png)
 
 <ul>
 <ol><strong>Sign in</strong></ol>
 <li>This page will allow the user to log in after registering their credentials. </li>
 </ul>
 
-![restaurant_app](booking/static/booking/images/login.png)
+![Remember](public/loginPage.png)
 
 <ul>
 <ol><strong>Log Out</strong></ol>
-<li>The log out page enables the user to exit the application.</li>
+<li>The log out button enables the user to exit the application and be redirected to the landing or start page.</li>
 </ul>
 
-![restaurant_app](booking/static/booking/images/logout.png)
-
-<ul>
-<ol><strong>Admin panel</strong></ol>
-<li>The admin panel is accessible only by administrators,it shows the database details.</li>
-</ul>
-
-![restaurant_app](booking/static/booking/images/admin.png)
-
-# Design
-
-<!-- The application layout was designed by hand on figma highlighting the core parts of the application. As viewed in the diagram, the navigation area, a text area inbetween, sections with images and a footer to sum it up. -->
-
-![restaurant_app](booking/static/booking/images/design.png)
 
 <ul>
 <ol> <strong>Features not implemented</strong> </ol>
 
-<li>We did not include an Update functionality ideally basing on the purpose of our application and the people intended to use it but its something we look forward to implement in the future.</li>
 <li>The ability for a user to delete their account.</li>
 <li>The ability for a user to reset their password incase they forgot it.</li>
 <li>The ability for a user to add pictures of themselves inaddition to the notes, this would strongly better their memory but this is a feature we didnt implement due to time constraints.</li>
@@ -113,7 +98,7 @@ The logged in user can always come back and retrieve a list of all the cities th
 <li>HTML, W3C was used to validate the project for any errors. The project did not have any errors and was successfull.
 The site tested HTML and CSS for the application.</li>
 
-![restaurant_app](booking/static/booking/images/validation10.png)
+![Remember](booking/static/booking/images/validation10.png)
 
 [W3Validator](https://validator.w3.org/)
 
@@ -122,22 +107,24 @@ Code from the javascript file was copied and pasted into the JS Hint application
 
 [jshint](https://jshint.com/)
 
-![restaurant_app](booking/static/booking/images/js-valid.png)
+![Remember](booking/static/booking/images/js-valid.png)
 
 <li>Manual testing was done on the different parts of the software to ensure that it works as it should</li>
-<li>Manual testing was done on the form to ensure that fields that have an asterik must be filledout for the form to be considered valid.</li>
+<li>Manual testing was done on both the signin and signup forms to ensure that all fields must be filledout before submission. Errors are visually shown to the user to indicate such fields and errors.</li>
 
-![restaurant_app](booking/static/booking/images/formTesting.png)
+
 
 <li>The log in form was also tested to ensure that only signedup users can log into the application. This is indicated by the message provided to the user incase wrong details are entered during the login process.</li>
 
-![restaurant_app](booking/static/booking/images/loginTest.png)
+![Remember](public/loginTesting.png)
 
-![restaurant_app](booking/static/booking/images/login_message.png)
+![Remember](public/signupTest.png)
+
+
 
 The live link can be found here;
 
-[restaurant_app](https://allano256.github.io/restaurant_app/)
+[Remember](https://allano256.github.io/Remember/)
 
 </ul>
 
@@ -167,7 +154,7 @@ The project was deployed on the GitHub hosting platform and below are the steps 
 </ul>
 The deployed version can be found via this link on Heroku,
 
-[restaurant_app](https://restaurant256-cba0e80966cc.herokuapp.com/)
+[Remember](https://remember-9895023cd960.herokuapp.com/)
 
 </ul>
 
@@ -196,9 +183,9 @@ The deployed version can be found via this link on Heroku,
 
 ## Colors used
 
-We used color green for the About(#ffffff )
+We used color green for the About and most parts of the application (#57A75), to highlight each city we used the (#988D64) color and the buttons a mixture of (#OOBCD4) and (#DFD225)
 
-![restaurant_app](booking/static/booking/images/green.png)
+
 
 #### Early deployment.
 
