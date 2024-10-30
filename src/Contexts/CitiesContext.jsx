@@ -134,7 +134,7 @@ function CitiesProvider({children}) {
               const decoded = jwtDecode(token);
               console.log(decoded);
               const {user_id} = decoded;
-              updatedCity[user]=user_id;
+              updatedCity['user']=user_id;
 
              
 
