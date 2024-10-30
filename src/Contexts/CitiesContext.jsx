@@ -4,11 +4,7 @@ import {jwtDecode} from 'jwt-decode';
 
 const API_BASE_URL = 'https://drf-api-remember-f742a049740b.herokuapp.com/api/v1'
 
-
-
 const CitiesContext = createContext();
-
-
 
 function getCSRFToken(){
   return localStorage.getItem('refresh_token');
@@ -21,8 +17,6 @@ function CitiesProvider({children}) {
     const [isLoading, setIsLoading] = useState(false);
     const [currentCity, setCurrentCity] = useState(null)
 
-  
-    
         useEffect(function(){
             async function fetchCities(){
               try {

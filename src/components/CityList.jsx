@@ -28,11 +28,7 @@ function CityList() {
     )
 
 
-    // return (
-    //     <ul className={styles.cityList} >
-    //        {cities.map((city, index)=> <CityItem city={city} key={city.id || index} /> )}
-    //     </ul>
-    // )
+    
 }
 
 export default CityList
