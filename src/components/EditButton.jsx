@@ -2,7 +2,12 @@ import React from 'react';
 
 function EditButton({ onClick }) {
     return (
-        <button onClick={onClick} type="button">
+        <button  style="
+        padding: 1rem;
+        font-size: 2rem !important;!i;!;
+        background-color: #00BCD4;
+        border-radius: 10px;
+    " onClick={onClick} type="edit">
             ✎ Edit
         </button>
     );
@@ -10,20 +15,3 @@ function EditButton({ onClick }) {
 
 export default EditButton;
    
-
-//     const handleClick =(e) => {
-//         e.preventDefault();
-//         if (isEdit){
-//             onEdit();
-//         } else {
-//             navigate(-1);
-//         }
-//     }
-
-
-// return(
-//     <Button type={isEdit ? 'edit': 'back'} onClick={handleClick}>
-//         {isEdit ? '✎ Edit' : '← Back' }
-//        </Button>
-// );
-
