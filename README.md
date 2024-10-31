@@ -7,7 +7,7 @@ The application is powered by React-Vite. The user interface is crafted using a 
 
 Its a responsive site as illustrated below.
 
-![Remember]()
+![Remember](public/remember-responsive.png)
 
 # User stories
 
@@ -98,16 +98,16 @@ The logged in user can always come back and retrieve a list of all the cities th
 <li>HTML, W3C was used to validate the project for any errors. The project did not have any errors and was successfull.
 The site tested HTML and CSS for the application.</li>
 
-![Remember](booking/static/booking/images/validation10.png)
+![Remember](public/w3cvalidation.png)
 
 [W3Validator](https://validator.w3.org/)
 
 <li>Javascript, JS Hint was used to validate the javascript for any errors. The project did not have any errors an was successful.
-Code from the javascript file was copied and pasted into the JS Hint application for tesing which didnt produce any errors.</li>
+Code from the javascript file was copied and pasted into the JS Hint application for tesing which didnt produce any errors, only warnings as seen in the image below.</li>
 
 [jshint](https://jshint.com/)
 
-![Remember](booking/static/booking/images/js-valid.png)
+![Remember](public/jslint.png)
 
 <li>Manual testing was done on the different parts of the software to ensure that it works as it should</li>
 <li>Manual testing was done on both the signin and signup forms to ensure that all fields must be filledout before submission. Errors are visually shown to the user to indicate such fields and errors.</li>

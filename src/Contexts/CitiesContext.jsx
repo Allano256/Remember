@@ -17,6 +17,8 @@ function CitiesProvider({children}) {
     const [isLoading, setIsLoading] = useState(false);
     const [currentCity, setCurrentCity] = useState(null)
 
+    // This will fetch all the cities 
+    
         useEffect(function(){
             async function fetchCities(){
               try {
@@ -119,6 +121,7 @@ function CitiesProvider({children}) {
            
           }
 
+          // This function will update the city
           async function updateCity(id, updatedCity){
             try {
               setIsLoading(true);
@@ -167,14 +170,14 @@ function CitiesProvider({children}) {
                 
                 });
                     
-                //  This will delete the  cityfrom the list.
+                //  This will delete the city from the list.
              setCities((cities)=> cities.filter((city)=> city.id !== id));
-              ; 
+              
                        
               } catch{
                 alert('Error deleting city...')
               } finally {
-                setIsLoading(false)
+                setIsLoading(false);
               }
            
           }
