@@ -20,6 +20,13 @@ Features in this project were structured based on the
 <li><strong>Acceptance Criteria:</strong> This field specifies the conditions or criteria that must be met for the user story to be considered complete. It helps define the boundaries and expectations for implementing the user story.</li>
 </ul>
 
+# Design
+
+The application has a simple design as illustrated in the wireframe, showing the plan or design of the application that a user has to signup, gets redirected to the signin page. After that they get to the homepage and start their journey, if the user isn't signedin they will be redirected to the signin page. After successful login they will be redirected to the site with a map and stsart their journey of recording their adventures and be able to save their memories.
+
+![Remember](public/remember-wireframe.png)
+
+
 # Features
 
 <ul> 
