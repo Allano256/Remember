@@ -34,3 +34,27 @@
 .product section a {
   margin-top: 2rem;
 }
+
+
+/* Mobile */
+@media screen and (max-width: 600px) {
+  
+  .about section {
+   
+    display: block;
+    background-size: cover;
+    align-items: center;
+    width: fit-content;
+    
+    
+  }
+
+  .about img {
+   
+    object-fit: cover;
+  }
+
+  
+}
+
+

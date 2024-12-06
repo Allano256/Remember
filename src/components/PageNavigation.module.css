@@ -32,3 +32,14 @@ a.ctaLink:visited {
   padding: 0.8rem 2rem;
   border-radius: 7px;
 }
+
+
+/* Mobile */
+@media screen and (max-width: 600px) {
+  .nav{
+     padding-bottom: 30px;
+  }
+  h1 {
+    padding-bottom: 50px;
+  }
+}

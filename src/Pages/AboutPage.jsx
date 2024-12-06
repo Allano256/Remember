@@ -9,7 +9,7 @@ export default  function AboutPage() {
 
         <section>
             <img src="cameraGuy.jpg" alt="A person standing on a mountain" />
-            <div>
+            <div >
                 <h2>Remember</h2>
                 <p>Remember is an application that enables Alzheimer patients that have not completely lost their memory to keep track of their day today activies, in this case we help on enabling our patients note down and remember the places they have been to.</p>
 
