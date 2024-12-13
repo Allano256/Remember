@@ -111,7 +111,7 @@ export default function Signup() {
     <main className={styles.login}>
       <PageNavigation />
       <form onSubmit={handleSubmit} className={styles.form}>
-      <p className="info"> Have an account? Log in otherwise <Link to="/Login">Log in</Link>  </p>
+      <p className="info"> Have an account? Signup otherwise Log in here <Link to="/Login"> Log in </Link>  </p>
         {/* Username */}
         <div className={styles.row}>
           <label htmlFor="first_name">First Name</label>
