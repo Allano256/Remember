@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import styles from './Signup.module.css';
 import Button from "../components/Button";
 import PageNavigation from "../components/PageNavigation";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+
 
 const API_BASE_URL = 'https://drf-api-remember-f742a049740b.herokuapp.com/api/v1'
 
@@ -110,7 +111,7 @@ export default function Signup() {
     <main className={styles.login}>
       <PageNavigation />
       <form onSubmit={handleSubmit} className={styles.form}>
-        
+      <p className="info"> Have an account? Log in otherwise <Link to="/Login">Log in</Link>  </p>
         {/* Username */}
         <div className={styles.row}>
           <label htmlFor="first_name">First Name</label>

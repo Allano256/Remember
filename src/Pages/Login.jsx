@@ -4,6 +4,7 @@ import styles from "./login.module.css"
 import { useAuth } from "../Contexts/AuthContext";
 import Button from "../components/Button";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
  export default function  Login() {
@@ -26,8 +27,13 @@ useEffect(function (){
 
     return (
         <main className={styles.login}>
+            <div>
+               
+            </div>
             <PageNavigation />
+           
             <form className= {styles.form} onSubmit={handleSubmitEvent}>
+            <p className="info"> Have an account? Log in otherwise <Link to="/signup">Sign up</Link>  </p>
                 <div className={styles.row} >
                     <label htmlFor="email">Email </label>
                     <input type="email" id="email" placeholder="example@....." name="email" onChange={(e) => setUsername(e.target.value)} value={email} />
