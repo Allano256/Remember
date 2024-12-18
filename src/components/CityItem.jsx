@@ -15,7 +15,7 @@ function CityItem({city}) {
   const {currentCity, deleteCity} = useCities();
 
 
-    const {city_name,  emoji, date, id, lat, lng} = city;
+    const {city_name, date, id, lat, lng} = city;
     
 
     function handleClick(e){
@@ -28,8 +28,6 @@ function CityItem({city}) {
     return (
         <li >
           <Link  className= {`${styles.city} `} to={`${id}?lat=${lat}&lng=${lng}`} >
-          
-          <span className={styles.emoji} >{emoji} </span>
           <h3 className={styles.name}>{city_name} </h3>
           <time className={styles.date} > ({formatDate(date)})</time>
           <button className={styles.deleteBtn} onClick={handleClick} >&times;</button>

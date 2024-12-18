@@ -1,7 +1,5 @@
 import { useParams } from "react-router-dom";
 import styles from "./City.module.css";
-
-
 import { useEffect, useState } from "react";
 import { useCities } from "../Contexts/CitiesContext";
 import Spinner from "./Spinner";
@@ -23,7 +21,6 @@ function City() {
   const [isEditing, setIsEditing] = useState(false);
   const [formData, setFormData] = useState({
     city_name: '',
-    emoji: '',
     date: '',
     notes: ''
   });
@@ -39,7 +36,6 @@ function City() {
     if (currentCity) {
       setFormData({
         city_name: currentCity.city_name,
-        emoji: currentCity.emoji,
         date: currentCity.date,
         notes: currentCity.notes || '',
       });
@@ -70,7 +66,7 @@ function City() {
           <div className={styles.row}>
             <h6>City name</h6>
             <h3>
-              <span>{formData.emoji}</span> {formData.city_name}
+               {formData.city_name}
             </h3>
           </div>
 
@@ -112,17 +108,7 @@ function City() {
               required
             />
           </div>
-          <div className={styles.row}>
-            <label>Emoji</label>
-            <span>{formData.emoji}</span>
-            <input
-              type="text"
-              name="emoji"
-              value={formData.emoji}
-              onChange={handleChange}
-              required
-            />
-          </div>
+          
           <div className={styles.row}>
             <label>Date</label>
             <input
