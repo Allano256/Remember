@@ -75,13 +75,15 @@
 
 /* Supported screens (min-width: 769px) */
 @media screen and (min-width: 769px) {
-  .unsupported-message {
+  main .unsupported-message {
     display: none !important;
   }
 
   .app-content {
     display: block;
   }
+
+ 
 }
 
 
