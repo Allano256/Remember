@@ -50,11 +50,12 @@ function AuthProvider({ children }) {
         
        const token=data.tokens.access;
        const refresh_token = data.tokens.refresh
+       const user = data.user;
        
         localStorage.setItem('token', token);
         localStorage.setItem('refresh_token', refresh_token);
        
-        dispatch({type: 'login', payload:data});
+        dispatch({type: 'login', payload:user});
       } else {
         const errorMessage = data.error || "Invalid login credentials";
         dispatch({ type: "setError", payload: errorMessage }); // Set error message

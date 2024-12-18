@@ -15,7 +15,10 @@ function User() {
   return (
     <div className={styles.user}>
       
-      <span>Welcome, {user.first_name}</span>
+      <span>Welcome, {user?.first_name || "Guest"}</span>
+
+      
+      {/* <span>Welcome, {user.first_name}</span> */}
     
       <button onClick={handleClickEvent}>Logout</button>
     </div>
