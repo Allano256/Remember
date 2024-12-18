@@ -8,6 +8,7 @@ const AuthContext = createContext();
 const initialState = {
   user: null,
   isAuthenticated: false,
+  error:null,
 };
 
 function reducer(state, action) {
@@ -16,6 +17,8 @@ function reducer(state, action) {
       return { ...state, user: action.payload, isAuthenticated: true };
     case "logout":
       return { ...state, user: null, isAuthenticated: false };
+    case "setError":
+      return { ...state, error: action.payload };
     default:
       throw new Error("Unknown action");
   }
@@ -53,21 +56,21 @@ function AuthProvider({ children }) {
        
         dispatch({type: 'login', payload:data});
       } else {
-        const  errorData= await response.json();
+        const errorMessage = data.error || "Invalid login credentials";
+        dispatch({ type: "setError", payload: errorMessage }); // Set error message
+        // const  errorData= await response.json();
         console.error('Error ', errorData.error);
       }
     } catch (error){
       console.error('Login failed', error)
+      dispatch({ type: "setError", payload: "An unexpected error occurred" }); // Handle unexpected errors
     }
   }
-
-
 
   function logout() {
     localStorage.removeItem('token');
     dispatch({ type: "logout" });
 
-   
   }
 
   return (

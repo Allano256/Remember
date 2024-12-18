@@ -8,10 +8,11 @@ import { Link } from "react-router-dom";
 
 
  export default function  Login() {
+
 const [email, setUsername] = useState(" ");
 const [password, setPassword] = useState(" ");
 
-const  {login, isAuthenticated} =useAuth();
+const  {login,error, isAuthenticated} =useAuth();
 const navigate = useNavigate();
 
 function handleSubmitEvent (e){
@@ -43,8 +44,10 @@ useEffect(function (){
                     <input type="password" id="password" name="password"  onChange={(e)=> setPassword(e.target.value)} value={password}   />
                 </div>
 
+                {/* Display error message if exists */}
+                {error && <div className="error-message">{error}</div>}
+
                 <div>
-             
                     <Button type='primary'>Login</Button>
                 </div>
             </form>
