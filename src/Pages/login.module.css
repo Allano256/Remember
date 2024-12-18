@@ -30,8 +30,8 @@ p {
 }
 
 .error-message {
-  color: red;
-  font-size: 0.9rem;
+  color: rgb(208, 107, 107) !important;
+  font-size: 1.5rem;
   margin-top: 10px;
   text-align: center;
 }

@@ -63,7 +63,7 @@ function AuthProvider({ children }) {
       }
     } catch (error){
       console.error('Login failed', error)
-      dispatch({ type: "setError", payload: "An unexpected error occurred" }); // Handle unexpected errors
+      dispatch({ type: "setError", payload: "Login failed, check the email and password." }); // Handle unexpected errors
     }
   }
 
