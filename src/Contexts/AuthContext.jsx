@@ -26,7 +26,7 @@ function reducer(state, action) {
 
 
 function AuthProvider({ children }) {
-  const [{ user, isAuthenticated }, dispatch] = useReducer(
+  const [{ user, isAuthenticated, error }, dispatch] = useReducer(
     reducer,
     initialState
   );
@@ -47,7 +47,7 @@ function AuthProvider({ children }) {
       const data= await response.json();
 
       if (response.ok){
-        console.log(data)
+        
        const token=data.tokens.access;
        const refresh_token = data.tokens.refresh
        
@@ -62,7 +62,7 @@ function AuthProvider({ children }) {
         // console.error('Error ', errorData.error);
       }
     } catch (error){
-      // console.error('Login failed', error)
+      console.error('Login failed', error)
       dispatch({ type: "setError", payload: "An unexpected error occurred" }); // Handle unexpected errors
     }
   }
@@ -74,7 +74,7 @@ function AuthProvider({ children }) {
   }
 
   return (
-    <AuthContext.Provider value={{ user, isAuthenticated, login, logout }}>
+    <AuthContext.Provider value={{ user, isAuthenticated, login, logout, error }}>
       {children}
     </AuthContext.Provider>
   );
