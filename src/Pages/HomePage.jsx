@@ -8,8 +8,8 @@ import styles from "./Homepage.module.css";
        
             <main className={styles.home} >
              <div className="unsupported-message">
-              <h1 >Unsupported Screen Size</h1>
-             <p >This application is designed for iPads or larger screens. Please switch to a device with a larger screen to access the app.</p>
+             <p> Un-Supported Device.  <br/> <br/>
+             This application is designed for iPads or larger screens. Please switch to a device with a larger screen to access the app.</p>
               </div>
                 
               <div className="app-content" >
