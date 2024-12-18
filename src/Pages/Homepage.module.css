@@ -14,8 +14,6 @@
  
 } 
 
-
-
 .home section {
   display: flex;
   flex-direction: column;
@@ -39,11 +37,52 @@
 }
 
 
+/* Unsupported screens (max-width: 768px) */
+@media screen and (max-width: 768px) {
+  .unsupported-message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    padding: 20px;
+    color: rgb(244, 240, 255) !important;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #333 !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999; 
+  }
 
-/* Mobile */
-@media screen and (max-width: 600px) {
+  .home section{
+    display: none !important;
+  }
+
   .home {
-    height: 100%;
+    background-image: none;
+  }
+}
+
+/* Supported screens (min-width: 769px) */
+@media screen and (min-width: 769px) {
+  .unsupported-message {
+    display: none !important;
+  }
+
+  .app-content {
+    display: block;
+  }
+}
+
+
+/* Tablet (supported screen size) */
+
+/* @media screen and (max-width: 768px) { */
+  
+    /* height: 100%;
     margin: 2.5rem;
     background-image: linear-gradient(
         rgba(36, 42, 46, 0.8),
@@ -52,27 +91,47 @@
       url("../background.jpg");
     background-size: cover;
     background-position: center;
-    padding: 2.5rem 5rem;
+    padding: 2.5rem 5rem; */
+ 
+
+  /* .unsupported-message {
+    display: block;
+    padding: 20px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    
   }
-  
-  
+    .app-content {
+      display: none;
+    }
+
 }
+   */
+ 
+
+ 
 
 
-/* Tablet styles */
-@media screen and (min-width: 601px) and (max-width: 1024px) {
- .home {
+
+/* Larger screens (desktop or iPad Pro and above) */
+
+/* @media screen and (min-width: 769px) and (max-width: 1024px) { */
+ /* .app-content {
   height: 100%;
     margin: 2.5rem;
     background-image: linear-gradient(
         rgba(36, 42, 46, 0.8),
         rgba(36, 42, 46, 0.8)
       ),
-      url("../background.jpg");
-    background-size: cover;
+      url("../background.jpg"); */
+    /* background-size: cover;
     background-position: center;
     padding: 2.5rem 5rem;
     overflow: hidden;
- }
-  
+ } 
+ 
+ .unsupported-message {
+  display: none;
 } 
+}  */

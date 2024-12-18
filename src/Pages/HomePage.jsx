@@ -7,9 +7,14 @@ import styles from "./Homepage.module.css";
     return (
        
             <main className={styles.home} >
-                <PageNavigation />
-
-                <section>
+             <div className="unsupported-message">
+              <h1 >Unsupported Screen Size</h1>
+             <p >This application is designed for iPads or larger screens. Please switch to a device with a larger screen to access the app.</p>
+              </div>
+                
+              <div className="app-content" >
+                  <PageNavigation />
+                   <section>
                     <h1>We help you remember...
                     <br />
                     Remember helps you keep your fond memories! </h1>
@@ -18,7 +23,8 @@ import styles from "./Homepage.module.css";
                     </h2>
                     <Link to="/login" className="cta">Start your journey</Link>
                 </section>
-            </main>
+             </div>      
+          </main>
             
       
     )
