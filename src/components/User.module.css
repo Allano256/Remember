@@ -15,10 +15,7 @@
   gap: 1.6rem;
 }
 
-.user img {
-  border-radius: 100px;
-  height: 4rem;
-}
+
 
 .user button {
   background-color: var(--color-dark--2);

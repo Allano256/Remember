@@ -58,8 +58,7 @@ function AuthProvider({ children }) {
       } else {
         const errorMessage = data.error || "Invalid login credentials";
         dispatch({ type: "setError", payload: errorMessage }); // Set error message
-        // const  errorData= await response.json();
-        // console.error('Error ', errorData.error);
+        
       }
     } catch (error){
       console.error('Login failed', error)

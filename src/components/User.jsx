@@ -4,7 +4,7 @@ import styles from "./User.module.css";
 
 function User() {
   const { user, logout } = useAuth();
-  console.log(user)
+  
   const navigate = useNavigate();
 
   function handleClickEvent() {
@@ -15,7 +15,7 @@ function User() {
   return (
     <div className={styles.user}>
       
-      <span>Welcome, {user}</span>
+      <span>Welcome, {user.first_name}</span>
     
       <button onClick={handleClickEvent}>Logout</button>
     </div>
