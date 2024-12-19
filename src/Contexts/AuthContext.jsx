@@ -47,12 +47,13 @@ function AuthProvider({ children }) {
        
       const data= await response.json();
 
+
       if (response.ok){
         
        const token=data.tokens.access;
        const refresh_token = data.tokens.refresh
        const user = data.user;
-       console.log(user)
+       console.log(data)
 
        
         localStorage.setItem('token', token);
