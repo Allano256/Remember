@@ -51,6 +51,8 @@ function AuthProvider({ children }) {
        const token=data.tokens.access;
        const refresh_token = data.tokens.refresh
        const user = data.user;
+       console.log(user)
+
        
         localStorage.setItem('token', token);
         localStorage.setItem('refresh_token', refresh_token);
