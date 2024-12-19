@@ -34,6 +34,7 @@ function AuthProvider({ children }) {
   // Login function to authenticate user with backend
 
   async function login(email, password) {
+    console.log('enter login')
     try{
       const response= await fetch(`${API_BASE_URL}/auth/login/`, {
         method:'POST',
