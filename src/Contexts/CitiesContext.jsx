@@ -25,6 +25,7 @@ function CitiesProvider({children}) {
                 setIsLoading(true)
                
                 const token=localStorage.getItem('token');
+             
                 const res =  await fetch(`${API_BASE_URL}/cities/`, 
                   {
                     headers: {
@@ -107,7 +108,7 @@ function CitiesProvider({children}) {
                  const data = await res.json(); 
                  
                 //  This will add the newly created city to the list
-            //  setCities(cities=> [...cities, data]);
+            
             console.log("Before adding city:", cities);
              setCities(prevCities=> [...prevCities, data]);
              console.log("After adding city:", [...cities, data]);

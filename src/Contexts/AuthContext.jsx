@@ -55,9 +55,9 @@ function AuthProvider({ children }) {
        const user = data.user;
        console.log(data)
 
-       
         localStorage.setItem('token', token);
         localStorage.setItem('refresh_token', refresh_token);
+        localStorage.setItem('user', user);
        
         dispatch({type: 'login', payload:user});
       } else {
@@ -73,6 +73,7 @@ function AuthProvider({ children }) {
 
   function logout() {
     localStorage.removeItem('token');
+    localStorage.removeItem('user');
     dispatch({ type: "logout" });
 
   }
