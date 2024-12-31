@@ -5,7 +5,7 @@ import Map from "../components/Map";
 import User from '../components/User'
 
 function AppLayout() {
-    // <PageNavigation />
+    
           
     return (
         <div className={styles.app}>
