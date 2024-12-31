@@ -153,10 +153,9 @@ The project was deployed on the GitHub hosting platform and below are the steps 
 <li>Give your app a name.</li>
 <li>Connect your github repository to Heroku app.</li>
 <li>Create a Live Database by adding the postgreSQL add-on.</li>
-<li>Create a Cloudfare Account and set up a R2 Bucket.</li>
-<li>Create and Set up an email account for verification mails.</li>
-<li>Set Config Vars for your cloudfare bucket (AWS_S3_SECRET_ACCESS_KEY), database (DATABASE_URL) and email(EMAIL_HOST_PASSWORD).</li>
-<li>Deploy from "deploy", or choose an automatic deploy option.</li>
+<li>Search for your repository on Github</li>
+<li>Click on the deploy button at the bottom of the page</li>
+<li>After successful deployment, click on open app to view yor application after building.</li>
 
 </ul>
 The deployed version can be found via this link on Heroku,
