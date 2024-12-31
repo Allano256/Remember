@@ -53,10 +53,6 @@ function getCSRFToken(){
   return csrfToken;
 }
 
-
-
-  
-
   useEffect(function(){
     // This effect will check for the city and attach the new data to that city accordingly, lookup if this city exists,throw an error if it doesnt.
     if(!lat && !lng) return;
