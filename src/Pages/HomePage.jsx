@@ -7,11 +7,7 @@ import styles from "./Homepage.module.css";
     return (
        
             <main className={styles.home} >
-             <div className="unsupported-message">
-             <p> Un-Supported Device.  <br/> <br/>
-             This application is designed for iPads or larger screens. Please switch to a device with a larger screen to access the app.</p>
-              </div>
-                
+            
               <div className="app-content" >
                   <PageNavigation />
                    <section>
