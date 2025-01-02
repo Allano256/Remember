@@ -1,4 +1,4 @@
-# REMEMBER APPLICATION
+## REMEMBER APPLICATION
 
 Remember is an application that enables Alzheimer patients that have not completely lost their memory to keep track of their day today activies, in this case we help on enabling our patients note down and remember the cities they have been to.
 
@@ -109,7 +109,7 @@ The site tested HTML and CSS for the application.</li>
 
 [W3Validator](https://validator.w3.org/)
 
-<li>Javascript, JS Hint was used to validate the javascript for any errors. The project did not have any errors an was successful.
+<li>Javascript, JS Hint was used to validate the javascript for any errors. The project did not have any errors and was successful.
 Code from the javascript file was copied and pasted into the JS Hint application for tesing which didnt produce any errors, only warnings as seen in the image below.</li>
 
 [jshint](https://jshint.com/)
@@ -118,7 +118,6 @@ Code from the javascript file was copied and pasted into the JS Hint application
 
 <li>Manual testing was done on the different parts of the software to ensure that it works as it should</li>
 <li>Manual testing was done on both the signin and signup forms to ensure that all fields must be filledout before submission. Errors are visually shown to the user to indicate such fields and errors.</li>
-
 
 
 <li>The log in form was also tested to ensure that only signedup users can log into the application. This is indicated by the message provided to the user incase wrong details are entered during the login process.</li>
