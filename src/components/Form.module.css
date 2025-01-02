@@ -44,15 +44,19 @@
 }
 
 
-@media screen and (min-width: 2000px) {
+@media only screen and (min-width: 375px) and (max-width: 414px) {
   .formItem {
-    max-height: 90vh; 
-    overflow-y: auto; 
+    background-color: var(--color-dark--2);
+    border-radius: 7px;
+    padding: 2rem 3rem;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
   }
-
-  .formButtons {
-    flex-wrap: wrap; 
-    gap: 1rem; 
-  }
+  
+ 
+  
 }
+
 

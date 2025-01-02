@@ -24,3 +24,19 @@
   flex-direction: column;
   gap: 0.5rem;
 }
+
+@media only screen and (min-width: 375px) and (max-width: 414px) {
+  .form {
+    background-color: var(--color-dark--2);
+    border-radius: 7px;
+    padding: 2rem 3rem;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  
+    /* Different from other form */
+    width: 48rem;
+    margin: 8rem auto;
+  }
+}
