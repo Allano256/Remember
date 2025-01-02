@@ -104,12 +104,5 @@ input:focus {
 }
 
 
-@media screen and (min-width: 2000px) {
-  body {
-    overflow-y: hidden; 
-    max-height: hidden; 
-  }
-
-}
 
  

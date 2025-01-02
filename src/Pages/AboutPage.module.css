@@ -37,8 +37,7 @@
 }
 
 
-/* Mobile */
-@media screen and (max-width: 600px) {
+@media only screen and (min-width: 375px) and (max-width: 414px) {
   
   .about section {
    
@@ -54,9 +53,9 @@
    
     object-fit: cover;
   }
-
-  
 }
+
+
 
  /* Tablet styles */
 @media screen and (min-width: 601px) and (max-width: 1024px) {
