@@ -25,12 +25,34 @@
   gap: 0.5rem;
 }
 
+/* Media querry for mobile phones */
+
 @media only screen and (min-width: 430px) and (max-width: 932px) {
   .form {
     background-color: var(--color-dark--2);
     border-radius: 7px;
     padding: 2rem 3rem;
     width: auto !important;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  
+    /* Different from other form */
+    width: 48rem;
+    margin: 8rem auto;
+  }
+}
+
+
+/* Media querry for tablets */
+
+@media screen and (min-width:1024px) and (max-width:1366) {
+  
+  .form {
+    background-color: var(--color-dark--2);
+    border-radius: 7px;
+    padding: 2rem 3rem;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 2rem;
