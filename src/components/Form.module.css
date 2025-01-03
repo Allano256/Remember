@@ -43,6 +43,7 @@
   font-size: 1.2rem;
 }
 
+/* Media querry for small screens */
 
 @media only screen and (min-width: 430px) and (max-width: 932px) {
   .formItem {
@@ -56,6 +57,20 @@
   }
   
   
+}
+
+@media screen  and (min-width:1024px) and (max-width:600px) {
+  
+  .formItem {
+    background-color: var(--color-dark--2);
+    border-radius: 7px;
+    padding: 2rem 3rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    overflow: scroll;
+  }
 }
 
 
