@@ -59,7 +59,9 @@
   
 }
 
-@media screen  and (min-width:1024px) and (max-width:600px) {
+/* Media querry for nest hub */
+
+@media screen  and (min-width:600px) and (max-width:1024px) {
   
   .formItem {
     background-color: var(--color-dark--2);
