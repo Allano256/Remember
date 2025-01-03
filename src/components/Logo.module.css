@@ -3,11 +3,7 @@
   }
 
 
-  @media screen and (min-width: 1024px) and (max-width: 1366px) { 
-        .logo {
-          object-fit: contain;
-        }
-        } 
+  
   
   
   
