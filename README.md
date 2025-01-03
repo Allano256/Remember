@@ -119,10 +119,17 @@ Code from the javascript file was copied and pasted into the JS Hint application
 <li>Manual testing was done on the different parts of the software to ensure that it works as it should</li>
 <li>Manual testing was done on both the signin and signup forms to ensure that all fields must be filledout before submission. Errors are visually shown to the user to indicate such fields and errors.</li>
 
+<ol><strong>Testing-Login Form</strong></ol>
 
 <li>The log in form was also tested to ensure that only signedup users can log into the application. This is indicated by the message provided to the user incase wrong details are entered during the login process.</li>
+<li>The different fields of the form are tested to ensure that all information is acceptable, example when the user enters an email address without the "@" an error is shown to the screen to indicate that.
+If a field is left empty the user will still be notified of the missing field as required</li>
 
 ![Remember](public/loginTesting.png)
+
+<ol><strong>Testing-Signup Form</strong></ol>
+<li>On the signup form, a user is expected to fillin all the fields provided and if a user misses out on a field, an error is shown on the screen that the field is required. The user is furthermore required to confirm their password by entering it twice.
+If the user tries to submit an empty form, still a message will appear indicating that the fields cannot be left blank but filledout.</li>
 
 ![Remember](public/signupTest.png)
 
