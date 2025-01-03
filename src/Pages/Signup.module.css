@@ -25,7 +25,7 @@
   gap: 0.5rem;
 }
 
-@media only screen and (min-width: 375px) and (max-width: 414px) {
+@media only screen and (min-width: 430px) and (max-width: 932px) {
   .form {
     background-color: var(--color-dark--2);
     border-radius: 7px;
