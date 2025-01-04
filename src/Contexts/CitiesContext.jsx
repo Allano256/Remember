@@ -146,7 +146,7 @@ function CitiesProvider({children}) {
                 }
               });
               const data = await res.json();
-              console.log(data)
+              window.location.reload()
               setCities(prevCities => prevCities.map(city => city.id === id ? data : city))
             } catch(e) {
               alert(e)
