@@ -80,7 +80,7 @@ The logged in user can always come back and retrieve a list of all the cities th
 
 <ul>
 <ol><strong>Sign in</strong></ol>
-<li>This page will allow the user to log in after registering their credentials. </li>
+<li>This page will allow the user to log in after registering their credentials.After signing in the user is automatically redirected to their page shwoing the previously recorded cities or alerting them to start their journey by clicking on the map. </li>
 </ul>
 
 ![Remember](public/loginPage.png)
