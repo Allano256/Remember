@@ -14,11 +14,11 @@ Its a responsive site as illustrated below.
 Features in this project were structured based on the
 [user stories](https://github.com/users/Allano256/projects/7/views/1)
 
-<ul>
-<li><strong>Description Of Service:</strong> This field t describes the specific service, feature, or screen that the user story relates to.</li>
-<li><strong>User Objective:</strong> This field outlines the user's goal or objective. It should clearly state what the user wants to achieve or accomplish. The format follows: "As a user, I want to [action], so that [reason or benefit]." With this Objective in mind..</li>
-<li><strong>Acceptance Criteria:</strong> This field specifies the conditions or criteria that must be met for the user story to be considered complete. It helps define the boundaries and expectations for implementing the user story.</li>
-</ul>
+
+Description Of Service:This field t describes the specific service, feature, or screen that the user story relates to.
+User Objective:This field outlines the user's goal or objective. It should clearly state what the user wants to achieve or accomplish. The format follows: "As a user, I want to [action], so that [reason or benefit]." With this Objective in mind..
+Acceptance Criteria:This field specifies the conditions or criteria that must be met for the user story to be considered complete. It helps define the boundaries and expectations for implementing the user story.
+
 
 # Design
 
@@ -29,107 +29,109 @@ The application has a simple design as illustrated in the wireframe, showing the
 
 # Features
 
-<ul> 
- <ol> <strong> Navigation Bar</strong> </ol>
- <li>The navigation bar has features like logo,About signup, log in,  </li>
- <li>These different features enable the user to register their details as customers, be able to log in as registered users and make start on their journey to record their activities. They can also always come back and retrieve their activities over time but we intentionally didnt allow an edit functionality as this would not make sense to a patient that forgets things in a second to come back after an hour, day or two to try and edit something.</li>
-</ul>
+## Navigation Bar
+
+ The navigation bar has features like logo,About signup, log in,  
+ These different features enable the user to register their details as customers, be able to log in as registered users and make start on their journey to record their activities. They can also always come back and retrieve their activities over time but we intentionally didnt allow an edit functionality as this would not make sense to a patient that forgets things in a second to come back after an hour, day or two to try and edit something.
+
 
 ![Remember](public/NavbarPage.png)
 
-<ul> 
-<ol> <strong>The landing page</strong> </ol>
-<li>The landing page has an image of three supposedly friends holding hands and enjoying an evening displaying attachment to one anaother.</li>
-<li>In the fore front we just have wordings welcoming you to the application.  </li>
-</ul>
+
+## The landing page
+
+The landing page has an image of three supposedly friends holding hands and enjoying an evening displaying attachment to one anaother.
+In the fore front we just have wordings welcoming you to the application.  
+
 
 ![Remember](public/landingPage.png)
 
-<ul> 
-<ol> <strong>The Footer</strong> </ol>
-<li>The footer is only visible and accessed by logged in users, its a simple footer</li>
 
-</ul>
+## The Footer
+
+The footer is only visible and accessed by logged in users, its a simple footer
+
 
 ![Remember](public/footerPage.png)
 
-<ul> 
-<ol> <strong>Create City</strong></ol>
-<li>As a logged in user, if you have not visited yet any cities...you will be prompted to click on the map to get started using geolocation to place also a popup to that position. Then a form will be created which is autofilled with the date and city name and all you have to do is add the notes.</li>
-</ul>
+## Create City
+
+As a logged in user, if you have not visited yet any cities...you will be prompted to click on the map to get started using geolocation to place also a popup to that position. Then a form will be created which is autofilled with the date and city name and all you have to do is add the notes.
+
 
 ![Remember](public/createCity.png)
 
-<ul> 
-<ol> <strong>List of cities</strong></ol>
-<li>
-The logged in user can always come back and retrieve a list of all the cities they have noted down in their account, and also get a single city aswell to dive deeper and read the notes attached to the city.</li>
+ 
+## List of cities
+
+The logged in user can always come back and retrieve a list of all the cities they have noted down in their account, and also get a single city aswell to dive deeper and read the notes attached to the city.
 
 ![Remember](public/AllCities.png)
 
-<li>A logged in user also has the ablility to edit notes or date regarding their activity aswell. <li>
-</ul>
+A logged in user also has the ablility to edit notes or date regarding their activity aswell. 
 
-<ul>
-<ol><strong>Signup</strong></ol>
-<li> The  signup page allows the user to fillout a form with their details that are saved on the remember database.</li>
-<li>As a signedup user, they can have access to their Remember application and can access all the features on it. </li>
-</ul>
+
+
+## Signup
+
+ The  signup page allows the user to fillout a form with their details that are saved on the remember database.
+As a signedup user, they can have access to their Remember application and can access all the features on it. 
+
 
 ![Remember](public/signupPage.png)
 
-<ul>
-<ol><strong>Sign in</strong></ol>
-<li>This page will allow the user to log in after registering their credentials.After signing in the user is automatically redirected to their page shwoing the previously recorded cities or alerting them to start their journey by clicking on the map. </li>
-</ul>
+
+## Sign in
+
+This page will allow the user to log in after registering their credentials.After signing in the user is automatically redirected to their page shwoing the previously recorded cities or alerting them to start their journey by clicking on the map. 
+
 
 ![Remember](public/loginPage.png)
 
-<ul>
-<ol><strong>Log Out</strong></ol>
-<li>The log out button enables the user to exit the application and be redirected to the landing or start page.</li>
-</ul>
+
+## Log Out
+
+The log out button enables the user to exit the application and be redirected to the landing or start page.
+
+## Features not implemented
+
+The ability for a user to delete their account.
+The ability for a user to reset their password incase they forgot it.
+The ability for a user to add pictures of themselves inaddition to the notes, this would strongly better their memory but this is a feature we didnt implement due to time constraints.
 
 
-<ul>
-<ol> <strong>Features not implemented</strong> </ol>
+## Testing
 
-<li>The ability for a user to delete their account.</li>
-<li>The ability for a user to reset their password incase they forgot it.</li>
-<li>The ability for a user to add pictures of themselves inaddition to the notes, this would strongly better their memory but this is a feature we didnt implement due to time constraints.</li>
-
-</ul>
-
-<ul>
-<ol><strong>Testing</strong></ol>
-<li>HTML, W3C was used to validate the project for any errors. The project did not have any errors and was successfull.
-The site tested HTML and CSS for the application.</li>
+HTML, W3C was used to validate the project for any errors. The project did not have any errors and was successfull.
+The site tested HTML and CSS for the application.
 
 ![Remember](public/w3cvalidation.png)
 
 [W3Validator](https://validator.w3.org/)
 
-<li>Javascript, JS Hint was used to validate the javascript for any errors. The project did not have any errors and was successful.
-Code from the javascript file was copied and pasted into the JS Hint application for tesing which didnt produce any errors, only warnings as seen in the image below.</li>
+Javascript, JS Hint was used to validate the javascript for any errors. The project did not have any errors and was successful.
+Code from the javascript file was copied and pasted into the JS Hint application for tesing which didnt produce any errors, only warnings as seen in the image below.
 
 [jshint](https://jshint.com/)
 
 ![Remember](public/jslint.png)
 
-<li>Manual testing was done on the different parts of the software to ensure that it works as it should</li>
-<li>Manual testing was done on both the signin and signup forms to ensure that all fields must be filledout before submission. Errors are visually shown to the user to indicate such fields and errors.</li>
+Manual testing was done on the different parts of the software to ensure that it works as it should
+Manual testing was done on both the signin and signup forms to ensure that all fields must be filledout before submission. Errors are visually shown to the user to indicate such fields and errors.
 
-<ol><strong>Testing-Login Form</strong></ol>
+## Testing-Login Form
 
-<li>The log in form was also tested to ensure that only signedup users can log into the application. This is indicated by the message provided to the user incase wrong details are entered during the login process.</li>
-<li>The different fields of the form are tested to ensure that all information is acceptable, example when the user enters an email address without the "@" an error is shown to the screen to indicate that.
-If a field is left empty the user will still be notified of the missing field as required</li>
+
+The log in form was also tested to ensure that only signedup users can log into the application. This is indicated by the message provided to the user incase wrong details are entered during the login process.
+The different fields of the form are tested to ensure that all information is acceptable, example when the user enters an email address without the "@" an error is shown to the screen to indicate that.
+If a field is left empty the user will still be notified of the missing field as required
 
 ![Remember](public/loginTesting.png)
 
-<ol><strong>Testing-Signup Form</strong></ol>
-<li>On the signup form, a user is expected to fillin all the fields provided and if a user misses out on a field, an error is shown on the screen that the field is required. The user is furthermore required to confirm their password by entering it twice.
-If the user tries to submit an empty form, still a message will appear indicating that the fields cannot be left blank but filledout.</li>
+## Testing-Signup Form
+
+On the signup form, a user is expected to fillin all the fields provided and if a user misses out on a field, an error is shown on the screen that the field is required. The user is furthermore required to confirm their password by entering it twice.
+If the user tries to submit an empty form, still a message will appear indicating that the fields cannot be left blank but filledout.
 
 ![Remember](public/signupTest.png)
 
@@ -139,64 +141,58 @@ The live link can be found here;
 
 [Remember](https://allano256.github.io/Remember/)
 
-</ul>
 
 The project was deployed on the GitHub hosting platform and below are the steps taken to achieve the feat.
 
-<ul>
-<ol><strong>Deployment</strong></ol>
-<li>Log into your account in github</li>
-<li>Go to the repository of Remember
-</li>
-<li>Click on the code button,and copy your preffered clone link. </li>
-<li>Open the terminal in your code editor and change the current working directory to the location you want to use for the cloned directory.</li>
-<li>Use git clone into the terminal, paste the link you copied in step 3 and press enter.</li>
 
-<ul>
-<ol> Deployment using Heroku</ol>
-<li>Register for an account on Heroku or sign in.</li>
-<li>Create a new app.</li>
-<li>Give your app a name.</li>
-<li>Connect your github repository to Heroku app.</li>
-<li>Create a Live Database by adding the postgreSQL add-on.</li>
-<li>Search for your repository on Github</li>
-<li>Click on the deploy button at the bottom of the page</li>
-<li>After successful deployment, click on open app to view yor application after building.</li>
+## Deployment
 
-</ul>
+Log into your account in github
+Go to the repository of Remember
+
+Click on the code button,and copy your preffered clone link. 
+Open the terminal in your code editor and change the current working directory to the location you want to use for the cloned directory.
+Use git clone into the terminal, paste the link you copied in step 3 and press enter.
+
+
+## Deployment using Heroku
+
+Register for an account on Heroku or sign in.
+Create a new app.
+Give your app a name.
+Connect your github repository to Heroku app.
+Create a Live Database by adding the postgreSQL add-on.
+Search for your repository on Github
+Click on the deploy button at the bottom of the page
+After successful deployment, click on open app to view yor application after building.
 The deployed version can be found via this link on Heroku,
 
 [Remember](https://remember-9895023cd960.herokuapp.com/)
 
-</ul>
+## Bugs during development.
 
-<ul>
-<ol><strong>Bugs during development.</strong></ol>
-<li>Endless loop, which was always a case when we tried to retrieve a single city...and it was a useEffect area we had to figure out by only having one dependancy 'id' and not both 'id','getCity'</li>
-<li>Configuring the geolocation to have the popup always move to that point on the map and be visible.</li>
-<li>Authentication, 'authentication credentials not provided' this was an error that was preventing creation of a city as the tokens were not being passed well from the backend but also had erros with just simple typo errors instead of 'bearer' we had 'Token' and double checking the typo errors and configuring our backend the issue was resolved.</li>
+Endless loop, which was always a case when we tried to retrieve a single city...and it was a useEffect area we had to figure out by only having one dependancy 'id' and not both 'id','getCity'
+Configuring the geolocation to have the popup always move to that point on the map and be visible.
 
-</ul>
+Authentication, 'authentication credentials not provided' this was an error that was preventing creation of a city as the tokens were not being passed well from the backend but also had erroswith just simple typo errors instead of 'bearer' we had 'Token' and double checking the typo errors and configuring our backend the issue was resolved.
 
-<ul>
-<ol><strong>Content</strong></ol>
 
-<li> The images on the hero section were taken from pexels</li>
+## Content
+
+The images on the hero section were taken from pexels
 
 [pexels](https://pexels.com/sv-se/)
 
-<li>The icons used in the footer were taken from Font awesome.</li>
+The icons used in the footer were taken from Font awesome.
 
 [font awesome](https://fontawesome.com)
 
-<li> The font used was 'Roboto'.</li>
+ The font used was 'Roboto'.
 
-</ul>
 
 ## Colors used
 
 We used color green for the About and most parts of the application (#57A75), to highlight each city we used the (#988D64) color and the buttons a mixture of (#OOBCD4) and (#DFD225)
-
 
 
 #### Early deployment.
@@ -205,11 +201,49 @@ It was important for me to do early deployment as i was able to see the output,s
 
 ## Technologies used
 
-<ul>
-<li>GitHub, this was used for storage and deployment</li>
-<li>VS CODE, Editor</li>
-<li>Heroku - Deployment</li>
-</ul>
+ GitHub, this was used for storage and deployment
+ VS CODE, This was used as the Editor
+Heroku - Deployment of the application
+React - This wa used for building the front end of the application
+Javascript - React being a Javascript library, this was also used in the frontend.
+Python - This was used in the backend to build the API using Django Rest Frameworks.
+
+# Enhancing User Experience with React
+
+
+React is a powerful JavaScript library for building user interfaces. In our project, React plays a crucial role in creating a dynamic, responsive, and efficient user experience.
+
+## Improved User Experience through React
+
+### Dynamic and Responsive UI
+React's component-based architecture allows us to build a highly interactive and responsive user interface. This results in a more engaging user experience.
+
+### Faster Rendering with Virtual DOM
+React's virtual DOM ensures that updates are applied efficiently, making the interface feel smooth and reducing load times.
+
+### State Management for Consistent UI
+With React's state management, we ensure that the UI reflects the current state of the application accurately, providing a consistent and reliable experience for users.
+
+
+
+### Component Reusability
+We have designed reusable components that streamline development and maintain a consistent look and feel across the application.
+
+### Seamless Navigation
+Using React Router, users can navigate the application seamlessly without experiencing full-page reloads, enhancing the overall user flow.
+
+### Real-time Data Updates
+React enables us to fetch and display data in real-time, keeping the interface up-to-date with the latest information.
+
+### Improved Error Handling
+Custom error boundaries in React help capture and handle errors gracefully, improving user feedback and recovery options.
+
+
+### Dynamic Form Handling
+React's state management allows for dynamic form validation and user feedback, improving the user experience during form submissions.
+
+## Conclusion
+React has significantly enhanced the user experience in our application by making it more dynamic, responsive, and efficient. 
 
 ## Feedback
 
