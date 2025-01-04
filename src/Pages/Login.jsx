@@ -22,7 +22,7 @@ function handleSubmitEvent (e){
 
 useEffect(function (){
   if (isAuthenticated)  {
-     window.location.href="/app/cities"
+    //  window.location.href="/app/cities"
   } 
 }, [isAuthenticated, navigate])
 
