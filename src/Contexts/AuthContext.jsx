@@ -1,4 +1,5 @@
 import { createContext, useContext, useReducer } from "react";
+import { json } from "react-router-dom";
 
 
 const API_BASE_URL = 'https://drf-api-remember-f742a049740b.herokuapp.com/api/v1'
@@ -57,9 +58,9 @@ function AuthProvider({ children }) {
 
         localStorage.setItem('token', token);
         localStorage.setItem('refresh_token', refresh_token);
-        localStorage.setItem('user', user);
+        localStorage.setItem('user', JSON.stringify(user));
        
-        dispatch({type: 'login', payload:user});
+        dispatch({type: 'login', payload: user});   
       } else {
         const errorMessage = data.error || "Invalid login credentials";
         dispatch({ type: "setError", payload: errorMessage }); // Set error message
