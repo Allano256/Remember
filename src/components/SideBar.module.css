@@ -10,7 +10,7 @@
 }
 
 
-@media only screen and (min-width: 430px) and (max-width: 932px) {
+@media screen and (max-width: 768px) {
   
   .sidebar {
     flex-basis: 56rem;
@@ -20,8 +20,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+    height: auto;
   }
+ 
 }
 
 

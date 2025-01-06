@@ -7,12 +7,10 @@ import { useCities } from '../Contexts/CitiesContext';
 
 function CityList() {
     // This function will return a list of all the cities visited.
-    console.log("CityList rendered");
+   
     
     const {cities, isLoading} = useCities();
 
-    console.log("Cities in CityList:", cities);
-    
 
     if(isLoading) return <Spinner />;
 

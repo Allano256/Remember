@@ -42,9 +42,6 @@ export default function Signup() {
     }
 
     
-    console.log("Form Submitted", formData);
-
-
     function getCookie(name){
       let cookieValue=null;
       if(document.cookie && document.cookie !== ''){

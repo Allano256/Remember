@@ -38,7 +38,10 @@
 }
 
 
-@media only screen and (min-width: 430px) and (max-width: 932px) {
-  
-  
+@media screen and (max-width: 768px) {
+  .map {
+    height: 80%;
+  }
+ 
+ 
 }

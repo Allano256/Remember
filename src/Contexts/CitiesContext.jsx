@@ -36,7 +36,7 @@ function CitiesProvider({children}) {
                   }
                 );
                  const data = await res.json();
-                console.log(data)
+               
                  setCities(data);
                
               } catch{
@@ -50,7 +50,7 @@ function CitiesProvider({children}) {
           },[]);
 
           async function getCity(id){
-            console.log(id)
+           
 
             // This function will get one specific City using the id.
               try {
@@ -87,7 +87,7 @@ function CitiesProvider({children}) {
                 const token = localStorage.getItem('token');
                 
                 const decoded = jwtDecode(token);
-                console.log(decoded);
+               
                 const {user_id} = decoded;
 
                 const city={...newCity, city_name:newCity.cityName, user:user_id}
@@ -109,10 +109,9 @@ function CitiesProvider({children}) {
                  
                 //  This will add the newly created city to the list
             
-            console.log("Before adding city:", cities);
+           
              setCities(prevCities=> [...prevCities, data]);
-             console.log("After adding city:", [...cities, data]);
-              
+          
                        
               } catch{
                 alert('Error creating the city ...')
@@ -130,7 +129,7 @@ function CitiesProvider({children}) {
               const token = localStorage.getItem('token');
               
               const decoded = jwtDecode(token);
-              console.log(decoded);
+             
               const {user_id} = decoded;
               updatedCity['user']=user_id;
 

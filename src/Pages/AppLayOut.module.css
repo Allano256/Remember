@@ -7,14 +7,5 @@
 }
 
 
-@media only screen and (min-width: 430px) and (max-width: 932px) {
-  
-  .app {
-    height: 100vh;
-    padding: 1.2rem;
-    overscroll-behavior-y: none;
-    display: block;
-   
-  }
-}
+
 

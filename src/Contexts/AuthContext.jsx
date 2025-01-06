@@ -35,7 +35,7 @@ function AuthProvider({ children }) {
   // Login function to authenticate user with backend
 
   async function login(email, password) {
-    console.log('enter login')
+    
     try{
       const response= await fetch(`${API_BASE_URL}/auth/login/`, {
         method:'POST',
@@ -52,8 +52,7 @@ function AuthProvider({ children }) {
        const token=data.tokens.access;
        const refresh_token = data.tokens.refresh
        const user = data.user;
-       console.log(data)
-
+      
         localStorage.setItem('token', token);
         localStorage.setItem('refresh_token', refresh_token);
         localStorage.setItem('user', JSON.stringify(user));

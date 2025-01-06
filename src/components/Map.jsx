@@ -10,8 +10,7 @@ import { useUrlPosition } from "../Hooks/useUrlPosition";
 function Map() {
 
     const{cities} = useCities();
-    console.log("Cities from backend:", cities);
-   
+  
     const [mapPosition, setMapPosition] = useState([40, 0])
     
      const {isLoading: isLoadingPosition, position: geolocationPosition, getPosition} = useGeolocation();

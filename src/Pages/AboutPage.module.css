@@ -37,59 +37,20 @@
 }
 
 
-@media only screen and (min-width: 430px) and (max-width: 932px) {
-  
-  .about section {
+
+/* Media querry for small screens */
+
+@media screen and (max-width: 768px) {
+  .about {
    
-    display: block;
-    background-size: cover;
-    align-items: center;
-    width: fit-content;
-    
-    
+    padding: 1rem rem;
+    background-color: var(--color-dark--1);
+    min-height: calc(100vh - 5rem);
   }
 
-  .about img {
-   
-    object-fit: cover;
-  }
-}
-
-
-
- /* Tablet styles */
-@media screen and (min-width: 600px) and (max-width: 1024px) {
- 
-  .about img {
-   
-    object-fit: cover;
-  }
 
   .about section {
-   
     display: block;
-    background-size: cover;
-    align-items: center;
-    width: fit-content;
-    
+   
   }
-  .about h2 {
-    font-size: 5rem;
-    line-height: 1.2;
-    margin-bottom: 3rem;
-    margin-top: 2rem;
-
-  }
-  
-  
-  .about p {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    letter-spacing: 1px;
-  }
-
- 
 }
-
-
-  
