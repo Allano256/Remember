@@ -4,11 +4,13 @@ import styles from "./User.module.css";
 
 function User() {
   
-  
   const { user, logout } = useAuth();
-
-  console.log(user)
-  
+  const storedinUser = localStorage.getItem(user)
+  let loggedinUser = null
+  if (storedinUser)
+  { loggedinUser = JSON.parse(storedinUser)}
+ 
+  console.log("---",loggedinUser)
   const navigate = useNavigate();
 
   function handleClickEvent() {
@@ -19,11 +21,9 @@ function User() {
   return (
     <div className={styles.user}>
       
-      <span>Welcome, {user?.first_name || "Guest"}</span>
+      <span>Welcome, {loggedinUser?.first_name || "Guest"}</span>
 
-      
-      {/* <span>Welcome, {user.first_name}</span> */}
-    
+
       <button onClick={handleClickEvent}>Logout</button>
     </div>
   );
