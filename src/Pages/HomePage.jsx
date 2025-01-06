@@ -12,8 +12,8 @@ import styles from "./Homepage.module.css";
                   <PageNavigation />
                    <section>
                     <h1>
-                        {/* We help you remember... */}
-                       Testing Deployment
+                        We help you remember...
+                     
                     <br />
                     Remember helps you keep your fond memories! </h1>
                     <h2>

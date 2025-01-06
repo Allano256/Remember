@@ -3,6 +3,13 @@
   }
 
 
-  
+  /* Media querry for small screens */
+
+@media screen and (max-width: 768px) {
+  .logo{
+   height: 80px;
+  }
+}
+
   
   
