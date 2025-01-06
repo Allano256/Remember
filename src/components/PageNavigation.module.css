@@ -33,10 +33,10 @@ a.ctaLink:visited {
   border-radius: 7px;
 }
 
+
+
 @media screen and (max-width: 768px) {
-  .nav {
-    display: none !important; 
-  }
+  
 }
 
 

@@ -104,5 +104,19 @@ input:focus {
 }
 
 
+/* Media querry for small screens */
+
+@media screen and (max-width: 768px) {
+  .logo{
+   height: 80px;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .home {
+    padding: 2.5rem 1rem;
+  }
+}
 
  

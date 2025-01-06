@@ -10,9 +10,8 @@ function User() {
   if (storedinUser)
   { loggedinUser = JSON.parse(storedinUser)}
  
-  console.log("---",loggedinUser)
   const navigate = useNavigate();
-
+  
   function handleClickEvent() {
     logout();
     navigate("/");
