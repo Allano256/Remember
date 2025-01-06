@@ -5,7 +5,7 @@ import styles from "./User.module.css";
 function User() {
   
   const { user, logout } = useAuth();
-  const storedinUser = localStorage.getItem(user)
+  const storedinUser = localStorage.getItem('user')
   let loggedinUser = null
   if (storedinUser)
   { loggedinUser = JSON.parse(storedinUser)}
