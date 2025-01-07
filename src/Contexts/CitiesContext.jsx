@@ -89,9 +89,11 @@ function CitiesProvider({children}) {
                 const decoded = jwtDecode(token);
                
                 const {user_id} = decoded;
-
+                
+                console.log(newCity)
                 const city={...newCity, city_name:newCity.cityName, user:user_id}
-
+                console.log(city)
+                
                 const res =  await fetch(`${API_BASE_URL}/cities/`, {
                   method:'POST',
                   body: JSON.stringify(city),
