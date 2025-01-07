@@ -26,6 +26,7 @@ function City() {
   });
 
   let currentCity = null;
+  // if (city === null) return;
   cities.forEach((city) => {
     if (city.id === parseInt(id)) {
       currentCity = city;

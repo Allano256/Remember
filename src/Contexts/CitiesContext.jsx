@@ -89,13 +89,11 @@ function CitiesProvider({children}) {
                 const decoded = jwtDecode(token);
                
                 const {user_id} = decoded;
-                
-                console.log(newCity)
+                            
                 const city={...newCity, city_name:newCity.cityName, user:user_id}
-                console.log(city)
-                
+               
                 const formattedDate = new Date(city.date).toISOString().split("T")[0];
-                console.log(formattedDate);
+               
                 city.date= formattedDate;
 
                 const res =  await fetch(`${API_BASE_URL}/cities/`, {
@@ -106,7 +104,6 @@ function CitiesProvider({children}) {
                     'Authorization': `Bearer ${token}`,
                     'Content-Type': 'application/json',
                     'X-CSRFToken': csrfToken,
-                   
                    
                   }
                 });
