@@ -94,10 +94,10 @@ function CitiesProvider({children}) {
                 const city={...newCity, city_name:newCity.cityName, user:user_id}
                 console.log(city)
                 
-                const formattedDate = new Date(dateISOString).toISOString().split("T")[0];
+                const formattedDate = new Date(city.date).toISOString().split("T")[0];
                 console.log(formattedDate);
                 city.date= formattedDate;
-                
+
                 const res =  await fetch(`${API_BASE_URL}/cities/`, {
                   method:'POST',
                   body: JSON.stringify(city),
