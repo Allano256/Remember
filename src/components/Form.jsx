@@ -133,7 +133,8 @@ function getCSRFToken(){
       <div className={styles.row}>
         <label htmlFor="date">When did you go to {cityName}?</label>
         
-        <DatePicker onChange={(date)=> setDate(date)} key={date} selected={date} dateFormat='dd/MM/yyyy' id="date" />
+        <DatePicker onChange={(date)=> setDate(date)} key={date} selected={date}  id="date" />
+        {/* <DatePicker onChange={(date)=> setDate(date)} key={date} selected={date} dateFormat='dd/MM/yyyy' id="date" /> */}
       </div>
 
       <div className={styles.row}>
