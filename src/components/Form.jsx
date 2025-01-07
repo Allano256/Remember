@@ -91,6 +91,7 @@ function getCSRFToken(){
 
  async function handleSubmit(e){
   e.preventDefault();
+  cpnsole.log(date)
   if(!cityName || !date) return;
 
   const newCity= {
