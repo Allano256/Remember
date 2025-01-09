@@ -43,8 +43,13 @@
   font-size: 1.2rem;
 }
 
-input, textarea:hover{
+ textarea:hover{
      background-color: #98c1cc;
+     cursor: pointer;
+}
+input:hover{
+  background-color: #98c1cc;
+  cursor: pointer;
 }
 
 /* Media querry for small screens */
