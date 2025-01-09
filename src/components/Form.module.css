@@ -43,9 +43,13 @@
   font-size: 1.2rem;
 }
 
+input, textarea{
+     background-color: #98c1cc;
+}
+
 /* Media querry for small screens */
 
-@media only screen and (min-width: 430px) and (max-width: 932px) {
+@media  screen and (min-width: 430px) and (max-width: 932px) {
   .formItem {
     background-color: var(--color-dark--2);
     border-radius: 7px;
