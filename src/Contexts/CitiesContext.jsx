@@ -81,6 +81,10 @@ function CitiesProvider({children}) {
           async function createCity(newCity){
 
             // This function will create City using the id.
+              if (!city.notes.length){
+                alert("Notes required")
+                return;
+              }
               try {
                 setIsLoading(true)
                 const csrfToken =getCSRFToken();
