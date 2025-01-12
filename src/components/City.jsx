@@ -50,6 +50,10 @@ function City() {
   if (isLoading) return <Spinner />;
 
   const handleChange = (e) => {
+    if (!formData.notes.trim()) {
+      alert("Notes cannot be empty.");
+      return;
+    }
     const { name, value } = e.target;
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
