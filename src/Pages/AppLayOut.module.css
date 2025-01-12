@@ -1,5 +1,5 @@
 .app {
-  
+  height: 100vh;
   padding: 2.4rem;
   overscroll-behavior-y: none;
   display: flex;
@@ -11,7 +11,7 @@
 
 @media screen and (max-width: 768px) {
   .app{  
-    
+    height: auto;
     display: block;
   }
 }
