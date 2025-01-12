@@ -17,4 +17,11 @@
   width: 0;
 }
 
+/* Media querry for small screens */
 
+@media screen and (max-width: 768px) {
+  .cityList{  
+    
+    height: auto;
+  }
+}
