@@ -51,3 +51,11 @@
 }
 
 
+/* Media querry for small screens */
+
+@media screen and (max-width: 768px) {
+  .city{  
+    overflow: hidden;
+    
+  }
+}
