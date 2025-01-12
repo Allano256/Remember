@@ -56,6 +56,10 @@ function City() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!formData.notes.trim()) {
+      alert("Notes cannot be empty.");
+      return;
+    }
     updateCity(id, formData);
     setIsEditing(false);
   };
@@ -125,15 +129,15 @@ function City() {
               required
             />
           </div>
-          <div className={styles.row}>
-            <label>Notes</label>
-            <textarea
-              name="notes"
-              value={formData.notes}
-              onChange={handleChange}
-              required
-            />
-          </div>
+      <div className={styles.row}>
+          <label>Notes</label>
+          <textarea
+            name="notes"
+            value={formData.notes}
+            onChange={handleChange}
+            
+          />
+        </div> 
            
           <button class='btn' type="submit">Save</button>
 
