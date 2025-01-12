@@ -2,7 +2,7 @@
   background-color: var(--color-dark--2);
   border-radius: 7px;
   padding: 2rem 3rem;
-  width: 100%;
+  width: 65%;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -51,6 +51,7 @@ input:hover{
   background-color: #98c1cc;
   cursor: pointer;
 }
+
 
 /* Media querry for small screens */
 

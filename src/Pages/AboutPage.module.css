@@ -53,4 +53,16 @@
     display: block;
    
   }
+
+  .about img {
+    width: 270px;
+    border-radius: 5px;
+  }
+
+  .about p {
+    width: 280px;
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+    letter-spacing: 1px;
+  }
 }
