@@ -55,32 +55,26 @@ input:hover{
 
 /* Media querry for small screens */
 
-@media  screen and (min-width: 430px) and (max-width: 932px) {
+@media screen and (max-width: 768px) {
   .formItem {
-    background-color: var(--color-dark--2);
-    border-radius: 7px;
-    padding: 2rem 3rem;
-    width: auto  !important;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+  
+    width: 98%;
+    
   }
-  
-  
-}
+ }
+ 
+
 
 /* Media querry for nest hub */
 
 @media screen  and (min-width:600px) and (max-width:1024px) {
   
   .formItem {
-    background-color: var(--color-dark--2);
-    border-radius: 7px;
-    padding: 2rem 3rem;
+    
+ 
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+   
+    
     overflow: scroll;
   }
 }

@@ -42,10 +42,9 @@
 
 @media screen and (max-width: 768px) {
   .about {
+   margin: 0;
    
-    padding: 1rem rem;
-    background-color: var(--color-dark--1);
-    min-height: calc(100vh - 5rem);
+   
   }
 
 

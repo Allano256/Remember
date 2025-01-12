@@ -13,13 +13,9 @@
 @media screen and (max-width: 768px) {
   
   .sidebar {
-    flex-basis: 56rem;
-    background-color: var(--color-dark--1);
-    padding: 3rem 5rem 3.5rem 5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: auto;
+    
+    padding: 0;
+   
   }
  
 }
@@ -29,11 +25,7 @@
 @media screen and (min-width: 768px) {
   
   .sidebar {
-    background-color: var(--color-dark--1);
-    padding: 3rem 5rem 3.5rem 5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  
     height: auto;
   }
 }
