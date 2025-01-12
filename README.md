@@ -105,7 +105,7 @@ The ability for a user to add pictures of themselves inaddition to the notes, th
 HTML, W3C was used to validate the project for any errors. The project did not have any errors and was successfull.
 The site tested HTML and CSS for the application.
 
-![Remember](public/w3cvalidation.png)
+![Remember](public/w3.success.png)
 
 [W3Validator](https://validator.w3.org/)
 
