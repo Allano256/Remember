@@ -81,7 +81,7 @@ function CitiesProvider({children}) {
           async function createCity(newCity){
 
             // This function will create City using the id.
-              if (!city.notes.length){
+              if (!newCity.notes.length){
                 alert("Notes required")
                 return;
               }
