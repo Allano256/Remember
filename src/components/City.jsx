@@ -131,6 +131,7 @@ function City() {
               name="notes"
               value={formData.notes}
               onChange={handleChange}
+              required
             />
           </div>
            
