@@ -14,7 +14,7 @@
   align-items: center;
 }
 
-.about img {
+.about section img {
   width: 100%;
   border-radius: 5px;
 }
@@ -53,7 +53,7 @@
    
   }
 
-  .about img {
+  .about section img {
     width: 270px;
     border-radius: 5px;
   }
