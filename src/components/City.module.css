@@ -46,7 +46,6 @@
   color: var(--color-brand--1);
 }
 
-
-@media screen and (min-width: 768px) {
-  
+.city buttons {
+  display: flex;
 }

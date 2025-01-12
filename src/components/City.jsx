@@ -94,8 +94,13 @@ function City() {
             </a>
           </div>
 
-          <BackButton />
-          <EditButton onClick={() => setIsEditing(true)} />
+            <div className="buttons" >
+            <BackButton />
+            <EditButton onClick={() => setIsEditing(true)} />
+            </div>
+         
+
+
         </>
       ) : (
         <form className={styles.editForm} onSubmit={handleSubmit}>
@@ -128,7 +133,7 @@ function City() {
               onChange={handleChange}
             />
           </div>
-
+           
           <button class='btn' type="submit">Save</button>
 
           <button class="btn-btn" onClick={() => setIsEditing(false)}>

@@ -3,6 +3,7 @@
   height: 100%;
   background-color: var(--color-dark--2);
   position: relative;
+  overflow: hidden;
 }
 
 .map {
@@ -40,7 +41,7 @@
 
 @media screen and (max-width: 768px) {
   .map {
-    height: 100%;
+    
     padding: 2.4rem;
     position: relative;
   }
